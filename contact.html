@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pago Fácil — Контакты</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="shared.css"/>
+</head>
+<body class="bg-slate-50">
+    <div id="site-nav"></div>
+
+    <section class="pt-40 pb-32">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <h1 class="text-6xl font-black text-[#0A1628] mb-6 tracking-tighter">Свяжитесь с нами</h1>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto">Наша команда поддержки готова помочь вам с любыми вопросами по платежам и комплаенсу.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
+                <!-- Info cards -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-10 rounded-[40px] shadow-premium border border-slate-100">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600 mb-6"><span class="material-symbols-outlined">mail</span></div>
+                        <h4 class="font-bold text-lg mb-2">Напишите нам</h4>
+                        <p class="text-slate-500 text-sm mb-4">Для общих вопросов и поддержки:</p>
+                        <a href="mailto:support@pago-facil.com" class="text-blue-600 font-bold hover:underline">support@pago-facil.com</a>
+                    </div>
+                    
+                    <div class="bg-white p-10 rounded-[40px] shadow-premium border border-slate-100">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-[#0A1628] mb-6"><span class="material-symbols-outlined">location_on</span></div>
+                        <h4 class="font-bold text-lg mb-2">Офис в Испании</h4>
+                        <p class="text-slate-500 text-sm">Doctor Benapres, 36,<br>08870, Sitges,<br>Barcelona, Spain.</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-2 bg-[#0A1628] p-12 rounded-[48px] shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full blur-[100px]"></div>
+                    <form class="space-y-8 relative z-10">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Ваше имя</label>
+                                <input type="text" placeholder="Иван Иванов" class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Email для связи</label>
+                                <input type="email" placeholder="example@mail.com" class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Тип обращения</label>
+                            <select class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors appearance-none">
+                                <option class="bg-[#0A1628]">Личный платеж</option>
+                                <option class="bg-[#0A1628]">Бизнес-интеграция</option>
+                                <option class="bg-[#0A1628]">Вопрос по комплаенсу</option>
+                                <option class="bg-[#0A1628]">Другое</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Сообщение</label>
+                            <textarea rows="4" placeholder="Опишите ваш вопрос..." class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full accent-gradient text-white py-5 rounded-2xl font-black text-lg hover:shadow-[0_0_30px_rgba(0,82,254,0.3)] hover:scale-[1.01] transition-all">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script src="shared.js"></script>
+    <script>initPage('contact');</script>
+</body>
+</html>

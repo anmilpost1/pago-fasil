@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pago Fácil - Наши услуги</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#101c2e",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#434e63",
+              "on-surface-variant": "#434656",
+              "primary-fixed-dim": "#28dfb5",
+              "primary": "#005946",
+              "secondary-container": "#0052fe",
+              "primary-container": "#00745c",
+              "tertiary-fixed": "#d7e3fc",
+              "outline": "#737688",
+              "secondary": "#003ec6",
+              "surface-container-low": "#f0f3ff",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#d7e3fc",
+              "background": "#f9f9ff",
+              "surface": "#f9f9ff",
+              "on-primary-container": "#58ffd2",
+              "on-error-container": "#93000a",
+              "surface-variant": "#d7e3fc",
+              "surface-container-high": "#dfe8ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#55fcd0",
+              "on-tertiary-container": "#d9e5fe",
+              "on-surface": "#101c2e",
+              "secondary-fixed-dim": "#b7c4ff",
+              "on-secondary-container": "#dfe3ff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#00513f",
+              "on-secondary-fixed": "#001452",
+              "secondary-fixed": "#dde1ff",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#bbc7df",
+              "inverse-primary": "#28dfb5",
+              "on-tertiary-fixed-variant": "#3c475b",
+              "on-primary": "#ffffff",
+              "surface-tint": "#006b55",
+              "on-secondary-fixed-variant": "#0038b6",
+              "on-background": "#101c2e",
+              "surface-container": "#e7eeff",
+              "inverse-surface": "#253144",
+              "surface-dim": "#cfdaf3",
+              "inverse-on-surface": "#ecf0ff",
+              "surface-bright": "#f9f9ff",
+              "outline-variant": "#c3c5d9",
+              "tertiary-container": "#5b667c",
+              "on-primary-fixed": "#002118"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #005946 0%, #55fcd0 100%);
+      }
+      .secondary-gradient {
+        background: linear-gradient(180deg, #003ec6 0%, #0052fe 100%);
+      }
+      .kinetic-shadow {
+        box-shadow: 0 10px 30px -10px rgba(16, 28, 46, 0.08);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-950">Pago Fácil</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-gap-8 gap-x-8">
+<a class="text-emerald-600 font-bold border-b-2 border-emerald-500 font-inter text-sm tracking-tight transition-all duration-300" href="#">Services</a>
+<a class="text-slate-600 hover:text-emerald-900 font-inter text-sm font-medium tracking-tight transition-all duration-300" href="#">Stats</a>
+<a class="text-slate-600 hover:text-emerald-900 font-inter text-sm font-medium tracking-tight transition-all duration-300" href="#">Benefits</a>
+<a class="text-slate-600 hover:text-emerald-900 font-inter text-sm font-medium tracking-tight transition-all duration-300" href="#">Support</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 hover:text-emerald-900 font-medium text-sm px-4 py-2 transition-all">Login</button>
+<button class="primary-gradient text-white font-bold text-sm px-6 py-2.5 rounded-full hover:scale-95 duration-200 ease-in-out shadow-lg shadow-primary/20">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Page Header -->
+<header class="mb-20 max-w-3xl">
+<h1 class="text-[3.5rem] font-extrabold text-on-surface leading-tight tracking-tight mb-4">
+                Наши <span class="text-primary">услуги</span>
+</h1>
+<p class="text-xl text-on-surface-variant font-medium opacity-80 leading-relaxed">
+                Полный спектр платежных решений для частных лиц и бизнеса. Быстро, безопасно и всегда под рукой.
+            </p>
+</header>
+<!-- Services Bento/Horizontal List -->
+<div class="space-y-12">
+<!-- Service 1: Оплата счетов -->
+<section class="grid md:grid-cols-2 gap-8 items-center bg-surface-container-low rounded-xl overflow-hidden p-8 md:p-12 kinetic-shadow">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+<h2 class="text-2xl font-bold mb-4 text-on-surface">Оплата счетов</h2>
+<p class="text-lg text-on-surface-variant mb-6">Все счета в одном месте — без очередей и бумажек.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Коммунальные услуги
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Интернет и ТВ
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Штрафы и налоги
+                        </li>
+</ul>
+<button class="primary-gradient text-white font-bold py-3 px-8 rounded-full hover:scale-95 transition-transform duration-200">Оплатить сейчас</button>
+</div>
+<div class="order-1 md:order-2 rounded-xl overflow-hidden aspect-video relative">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" data-alt="Modern high-tech home office setup with minimalist desk, tablet showing billing charts, and warm soft indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc92IgNz2Ee7UeMU5SUBoOD0WbzC1Ag9qm04OK0uWmyYhmy5zZ10VJy1UmSCWhe5jv36J88tBx6DB4H0yXMcIRtO_HePcb9b_GKplz4u9D3A3Nhst_6_wO36AN0Bq3NUL5bUfvMuc8VaPjZfeVk529lcMYCMtpc1pMN-rZQKjjBPzNm4eBB8crEa-aq8eoMfdIFR_HjxLf-FWLNjmDIQ9ukn4a2pgFwIslsTjzuVqz1GWTeyzXw-7O8YrHBCIF1eFUt4geVP2qBQ"/>
+</div>
+</section>
+<!-- Service 2: Денежные переводы -->
+<section class="grid md:grid-cols-2 gap-8 items-center bg-surface-container-lowest rounded-xl overflow-hidden p-8 md:p-12 kinetic-shadow outline-variant/15 border border-transparent">
+<div class="rounded-xl overflow-hidden aspect-video relative">
+<img class="w-full h-full object-cover" data-alt="Digital representation of global connectivity with glowing lines on a dark blue background symbolizing fast money transfers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcwrawmZG9CXxGnT24B3_NgVogsBlu35I5wT8inNq8hUJwypYlEvf-1egoDJ3f14owZvqlcOQ4KmAeGKOywMPtO8uPvoPGZi433vpAcOEgthp0K1hZZS9EMTEoaLUC5ODtbm92ay-Y81RHnBUeQANq3WFJw4rXeV5gdJP9jKTcb_haSQPQYK_bqsWIpVdQ4m4vo6P99o49iPMsHqygxM-w7p6qg71jLAblmTJNMOIUsKDBsyrSOPSIqcDmrDhn-ybP50MyHd2hpQ"/>
+</div>
+<div class="pl-0 md:pl-8">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">send</span>
+</div>
+<h2 class="text-2xl font-bold mb-4 text-on-surface">Денежные переводы</h2>
+<p class="text-lg text-on-surface-variant mb-6">Деньги доходят мгновенно в любую точку мира.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm">bolt</span> Минимальные комиссии
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm">public</span> Переводы по всему миру
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-sm">shield</span> Гарантия безопасности
+                        </li>
+</ul>
+<button class="secondary-gradient text-white font-bold py-3 px-8 rounded-full hover:scale-95 transition-transform duration-200">Отправить перевод</button>
+</div>
+</section>
+<!-- Service 3: Пополнение мобильной связи -->
+<section class="grid md:grid-cols-2 gap-8 items-center bg-surface-container-low rounded-xl overflow-hidden p-8 md:p-12 kinetic-shadow">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+</div>
+<h2 class="text-2xl font-bold mb-4 text-on-surface">Пополнение мобильной связи</h2>
+<p class="text-lg text-on-surface-variant mb-6">Всегда на связи с любимыми и коллегами.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">done_all</span> Мгновенное пополнение
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">schedule_send</span> Автоплатеж
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">money_off</span> Без комиссии
+                        </li>
+</ul>
+<button class="primary-gradient text-white font-bold py-3 px-8 rounded-full hover:scale-95 transition-transform duration-200">Пополнить баланс</button>
+</div>
+<div class="order-1 md:order-2 rounded-xl overflow-hidden aspect-video relative">
+<img class="w-full h-full object-cover" data-alt="Hand holding a sleek modern smartphone with a vibrant digital interface in a bright airy coffee shop setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwIUA1wCLsbHqXLiuZyAm7L15x8OXhQi5-XAydLMqr6RF-lP4Y90vBmBMU8MrnAlcN_14MtCwj1V0c-XMnt8-SLIxys6eqvJ8qbUiJcregBa8YpfUyxvW1n6aqw36vCuYGe2rzNJqdbIYrNJQGU7DL1kxm23-cba4nkA1rdaYsk1RMZ9ZNrIPvxgg1zg5nqrOkjUnblD8GYECjijXqn6NHY9lPCL_ONIzha7CbmbL1TakHu74jIWrrNY2Ku-f5nrEUH4Ik8rnag"/>
+</div>
+</section>
+<!-- Service 4: Онлайн-платежи для бизнеса -->
+<section class="grid md:grid-cols-2 gap-8 items-center bg-surface-container-highest/30 rounded-xl overflow-hidden p-8 md:p-12 kinetic-shadow">
+<div class="rounded-xl overflow-hidden aspect-video relative">
+<img class="w-full h-full object-cover" data-alt="Close up of a customer using a credit card for a contactless payment at a stylish modern boutique" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKhJ0dR0OwYuNnrDUnFtUGL4zkj7_zFyusaBzbwNLQ_wnnKTuboZFe45zhzKY9dq6Ab4iRFJrAT1gm-V2Mdby86fQRs8dIHHYuOFZtSkKZZG3pjRSVSCPWSf1rVDOCGaLUeNVxtWKeqcYWAnsQEPVQQCc1xj6VYCvO1Pddz5PTF6Ff6M2nZU7ClUy0IzRaFhupy0mkUF5VgHpiNbne3aqYGhy2Z-WJLeirpL5kt3gZc-Xa0ts8ef3wqKdzEEgeXS-sr_mi0d5YKA"/>
+</div>
+<div class="pl-0 md:pl-8">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+<h2 class="text-2xl font-bold mb-4 text-on-surface">Онлайн-платежи для бизнеса</h2>
+<p class="text-lg text-on-surface-variant mb-6">Принимай оплату уже сегодня с гибким эквайрингом.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary-container text-sm">speed</span> Прием платежей за 1 день
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary-container text-sm">integration_instructions</span> Простая интеграция
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary-container text-sm">trending_up</span> Повышение конверсии
+                        </li>
+</ul>
+<button class="secondary-gradient text-white font-bold py-3 px-8 rounded-full hover:scale-95 transition-transform duration-200">Подключить</button>
+</div>
+</section>
+<!-- Service 5: B2B решения -->
+<section class="grid md:grid-cols-2 gap-8 items-center bg-surface-container-low rounded-xl overflow-hidden p-8 md:p-12 kinetic-shadow">
+<div class="order-2 md:order-1">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">corporate_fare</span>
+</div>
+<h2 class="text-2xl font-bold mb-4 text-on-surface">B2B решения</h2>
+<p class="text-lg text-on-surface-variant mb-6">Платежи без рутины для вашей компании.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container text-sm">settings_suggest</span> Автоматизация
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container text-sm">savings</span> Снижение затрат
+                        </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container text-sm">query_stats</span> Прозрачная аналитика
+                        </li>
+</ul>
+<button class="bg-surface-container-highest text-on-surface font-bold py-3 px-8 rounded-xl hover:bg-surface-container-high transition-colors">Узнать больше</button>
+</div>
+<div class="order-1 md:order-2 rounded-xl overflow-hidden aspect-video relative">
+<img class="w-full h-full object-cover" data-alt="Professional business dashboard on a laptop screen with data visualization charts and clean office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-DeLTzm_3T72sPXDk9YOdULl-TIUP410aQQ1eOwSY6GXhq4K9v3l8a4MqIXxvMy9rWND0uTzRdNBTST-cArpk52ah98YPcJUgiMFDihwFJbsFIjck5zK9bf2Ka8iGT_tkHpLryATB_J5_ykbQlijYdgKnuxd3KI8Scpm2jJMuLugksQZjks2sTg02AfWmRg9VLnDcl8m_5ApGUE4368ZfSrVzlWHwHWWKZbYYW8lOKPcLHsKqjIHFFKKOahb_UlBzMQ0_rG9Lrw"/>
+</div>
+</section>
+<!-- Service 6: API и интеграции -->
+<section class="grid md:grid-cols-2 gap-8 items-center bg-on-tertiary-fixed rounded-xl overflow-hidden p-8 md:p-12 kinetic-shadow">
+<div class="rounded-xl overflow-hidden aspect-video relative">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up of clean programming code on a monitor with neon highlights and cinematic bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0zo6Px0zPZ9j_jSmWBE3_h7EOQs2QacEQvf14qVncWTuP76PCg_c6aeK7G2tdm_UwvowysDkzXK638CIphJWbLxfSSbXd_xfn_4YzUNoCFurP1Vs18ZqesQbFO1us7zqW-m8o4bsaVeVMaaEBjImkWfS7-C39ku7Xfc0K7VwKK7VYKMWJqr2p-nl9fwA1-a_tRiDwHpT3f0vqGhfQrAQNCqHOuEW_ZEWoMRQm_QfWgdIgdF0I5xrhcDedvZ-Hp6JQMAaFuQ2ukQ"/>
+</div>
+<div class="pl-0 md:pl-8">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h2 class="text-2xl font-bold mb-4 text-white">API и интеграции</h2>
+<p class="text-lg text-surface-container-high mb-6">Интеграция без боли для разработчиков.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-surface-container-highest/70">
+<span class="material-symbols-outlined text-primary-fixed text-sm">api</span> Гибкий API
+                        </li>
+<li class="flex items-center gap-3 text-surface-container-highest/70">
+<span class="material-symbols-outlined text-primary-fixed text-sm">bolt</span> Быстрая интеграция
+                        </li>
+<li class="flex items-center gap-3 text-surface-container-highest/70">
+<span class="material-symbols-outlined text-primary-fixed text-sm">layers</span> Масштабируемость
+                        </li>
+</ul>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold py-3 px-8 rounded-full hover:bg-primary-fixed-dim transition-colors">Документация</button>
+</div>
+</section>
+</div>
+<!-- Bottom CTA Section -->
+<section class="mt-32 py-20 bg-surface-container-low rounded-[2rem] text-center px-6">
+<h2 class="text-3xl font-bold mb-4 text-on-surface">Не нашли подходящее решение?</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto mb-10 text-lg">
+                Наша команда экспертов готова разработать индивидуальное платежное решение под задачи вашего бизнеса.
+            </p>
+<button class="primary-gradient text-white font-bold py-4 px-12 rounded-full hover:scale-95 transition-transform duration-200 shadow-xl shadow-primary/20">
+                Свяжитесь с нами
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full rounded-t-3xl mt-20">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="text-lg font-bold text-slate-900 mb-4">Pago Fácil</div>
+<p class="font-inter text-xs font-normal text-slate-500 max-w-xs leading-relaxed">
+                    © 2024 Pago Fácil Fintech. All rights reserved. Secure and kinetic movement of wealth.
+                </p>
+</div>
+<div>
+<h4 class="text-emerald-900 font-semibold mb-4 text-sm">Platform</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Services</a></li>
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Security</a></li>
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Stats</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-emerald-900 font-semibold mb-4 text-sm">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-emerald-900 font-semibold mb-4 text-sm">Transparency</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Regulatory Disclosure</a></li>
+<li><a class="text-slate-500 hover:text-emerald-700 transition-colors text-xs font-normal" href="#">Security</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

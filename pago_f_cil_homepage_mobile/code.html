@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pago Fácil — Платежи без границ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#d7e3fc",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f9f9ff",
+              "on-secondary-fixed-variant": "#0038b6",
+              "surface-container-highest": "#d7e3fc",
+              "on-primary-fixed-variant": "#00513f",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#dfe3ff",
+              "inverse-on-surface": "#ecf0ff",
+              "surface-dim": "#cfdaf3",
+              "outline-variant": "#c3c5d9",
+              "surface": "#f9f9ff",
+              "surface-tint": "#006b55",
+              "on-primary-fixed": "#002118",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#434656",
+              "primary-fixed-dim": "#28dfb5",
+              "secondary": "#003ec6",
+              "on-secondary-fixed": "#001452",
+              "tertiary": "#434e63",
+              "primary-fixed": "#55fcd0",
+              "on-primary-container": "#58ffd2",
+              "error": "#ba1a1a",
+              "inverse-primary": "#28dfb5",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#bbc7df",
+              "background": "#f9f9ff",
+              "on-surface": "#101c2e",
+              "inverse-surface": "#253144",
+              "tertiary-fixed": "#d7e3fc",
+              "on-tertiary-fixed-variant": "#3c475b",
+              "surface-container": "#e7eeff",
+              "primary": "#005946",
+              "error-container": "#ffdad6",
+              "on-background": "#101c2e",
+              "secondary-container": "#0052fe",
+              "on-tertiary-container": "#d9e5fe",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#dde1ff",
+              "surface-container-low": "#f0f3ff",
+              "on-tertiary-fixed": "#101c2e",
+              "outline": "#737688",
+              "tertiary-container": "#5b667c",
+              "primary-container": "#00745c",
+              "secondary-fixed-dim": "#b7c4ff",
+              "surface-container-high": "#dfe8ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #005946 0%, #006b55 50%, #28dfb5 100%);
+        }
+        .glass-nav {
+            background: rgba(249, 249, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed-dim selection:text-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm h-16 flex items-center justify-between px-6">
+<button aria-label="Menu" class="text-secondary active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<div class="text-xl font-black tracking-tighter text-secondary">
+            PAGO FÁCIL
+        </div>
+<div class="w-10"></div> <!-- Spacer for centering logo -->
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="kinetic-gradient text-on-primary px-6 pt-12 pb-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="relative z-10">
+<h1 class="text-4xl font-extrabold tracking-tight leading-[1.1] mb-6 font-headline">
+                    Pago Fácil — Платежи без границ
+                </h1>
+<p class="text-lg text-primary-fixed opacity-90 mb-10 max-w-[90%] leading-relaxed">
+                    Оплата счетов, переводы и пополнения — всё в одном месте. Безопасность Kinetic Vault для ваших финансов.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="w-full py-4 bg-primary-fixed text-on-primary-fixed font-bold rounded-full text-lg shadow-lg active:scale-[0.98] transition-transform">
+                        Начать бесплатно
+                    </button>
+<button class="w-full py-4 border-2 border-primary-fixed/30 text-primary-fixed font-bold rounded-full text-lg active:bg-white/5 transition-colors">
+                        Узнать больше
+                    </button>
+</div>
+</div>
+<div class="mt-12 -mx-6 opacity-40">
+<img alt="Financial Dashboard" class="w-full h-48 object-cover" data-alt="Modern abstract digital interface showing glowing financial data charts and currency symbols with motion blur effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4rKX4yrspkBOFjCtHAgUdWEzEJRN8fRKizRINJTBCjdp0yxO-fKMfWrE6FQBW2V4L21SvGG0rPpeGnbNinT7yeJIZcidU6oTbPVnQR3PUL7ET2nh-W8igoQcyu6gsCh_iq0FEiIagJHU1ZAdGBgg4LEoyfxJD4E23EnSZC60i_w4JkD3w32n4D5J_2zU-UyzppuM-YWv1niLQiS-kev9I-CWbe04ghGUgswoaw8TOZUIRvuCC7b9IBKgGiA6W3NWDNBoURcV8ZQ"/>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-16 px-6 bg-surface">
+<h2 class="text-2xl font-bold mb-8 font-headline text-on-surface">Наши услуги</h2>
+<div class="flex flex-col gap-4">
+<!-- Service Card 1 -->
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="receipt_long">receipt_long</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Оплата счетов</h3>
+<p class="text-on-surface-variant text-sm">Мгновенная оплата коммунальных услуг и налогов без очередей.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="send_money">send_money</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Денежные переводы</h3>
+<p class="text-on-surface-variant text-sm">Отправляйте средства друзьям и близким по всему миру за секунды.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="stay_current_portrait">stay_current_portrait</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Пополнение связи</h3>
+<p class="text-on-surface-variant text-sm">Моментальное пополнение баланса мобильного телефона любого оператора.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Онлайн-платежи</h3>
+<p class="text-on-surface-variant text-sm">Безопасная оплата покупок в интернет-магазинах по всему миру.</p>
+</div>
+<!-- Service Card 5 -->
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="business_center">business_center</span>
+</div>
+<h3 class="text-lg font-bold mb-2">B2B решения</h3>
+<p class="text-on-surface-variant text-sm">Корпоративные платежи и управление финансами для вашего бизнеса.</p>
+</div>
+<!-- Service Card 6 -->
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 bg-secondary-fixed rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="api">api</span>
+</div>
+<h3 class="text-lg font-bold mb-2">API интеграции</h3>
+<p class="text-on-surface-variant text-sm">Легкая интеграция нашей платежной системы в ваш продукт.</p>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-12 px-6 bg-surface-container-low">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl text-center shadow-sm">
+<div class="text-2xl font-black text-secondary font-headline">1M+</div>
+<div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">пользователей</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl text-center shadow-sm">
+<div class="text-2xl font-black text-secondary font-headline">50+</div>
+<div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">партнеров</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl text-center shadow-sm">
+<div class="text-2xl font-black text-secondary font-headline">99.9%</div>
+<div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">UPTIME</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl text-center shadow-sm">
+<div class="text-2xl font-black text-secondary font-headline">24/7</div>
+<div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">ПОДДЕРЖКА</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="py-16 px-6">
+<h2 class="text-2xl font-bold mb-10 font-headline">Почему Pago Fácil?</h2>
+<div class="space-y-10">
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Безопасность</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Мы используем протоколы Kinetic Vault для защиты каждой транзакции и данных пользователя.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Скорость</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Система оптимизирована для обработки платежей в реальном времени без задержек.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="touch_app">touch_app</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-1">Простота</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Интуитивный интерфейс, понятный с первого взгляда даже новым пользователям.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Reach -->
+<section class="py-16 px-6 bg-inverse-surface text-inverse-on-surface overflow-hidden relative">
+<div class="relative z-10">
+<h2 class="text-3xl font-black mb-4 font-headline tracking-tight">Global Reach.</h2>
+<p class="text-surface-variant/80 mb-8 leading-relaxed">Поддержка более 150 валют. Мы объединяем рынки и людей, делая финансовые границы невидимыми.</p>
+</div>
+<div class="relative -mx-6 h-64 mt-4">
+<img alt="World Map Concept" class="w-full h-full object-cover opacity-30 mix-blend-screen" data-alt="Minimalist glowing blue dotted world map illustration on a dark deep navy background with interconnected light lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEViBA6lhZP2rdcXwduiuErpXvMkIskTu2eE6Ayda4Vy_cBD5c-kHz7OZxHAwteheKW9s-oIEU9kNKF1ds-zFJmJ7yNl4vbhjQiDs_tE1NSWovDTeqnojw6SMlE64vz7-F3mzk0jCi4bpM2CXIdcevZGjR2bVk_I1sg0bcu91p7vofDuvq-qRWum8Ab_HBEQEuXx_P5JtLszfUb5eeSJRZ-UUsJCKsY-iVDLZyQSQwvmt04WqQCJdBGJr3TfSBJK4ydrhuyn9JHA"/>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low py-12 px-6 border-t border-outline-variant/20">
+<div class="flex flex-col items-center gap-8">
+<div class="text-xl font-black text-secondary tracking-tighter">PAGO FÁCIL</div>
+<div class="grid grid-cols-2 w-full gap-x-8 gap-y-6 text-sm">
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface">Услуги</h5>
+<a class="text-on-surface-variant" href="#">Платежи</a>
+<a class="text-on-surface-variant" href="#">Переводы</a>
+<a class="text-on-surface-variant" href="#">Бизнесу</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface">Компания</h5>
+<a class="text-on-surface-variant" href="#">О нас</a>
+<a class="text-on-surface-variant" href="#">Тарифы</a>
+<a class="text-on-surface-variant" href="#">Контакты</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface">Поддержка</h5>
+<a class="text-on-surface-variant" href="#">Help Center</a>
+<a class="text-on-surface-variant" href="#">Security</a>
+<a class="text-on-surface-variant" href="#">FAQ</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface">Право</h5>
+<a class="text-on-surface-variant" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant" href="#">Terms</a>
+</div>
+</div>
+<div class="flex gap-6 mt-4">
+<a class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center text-secondary" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center text-secondary" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</a>
+<a class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center text-secondary" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</a>
+</div>
+<div class="text-[10px] text-on-surface-variant opacity-60 text-center mt-6">
+                    © 2024 Pago Fácil Fintech S.A.<br/>Лицензия ЦБ №3500-К. Все права защищены.
+                </div>
+</div>
+</footer>
+</main>
+<!-- Navigation Drawer (Hidden initially) -->
+<div class="fixed inset-y-0 left-0 w-64 z-[60] bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 pointer-events-none" id="drawer">
+<div class="p-6 h-full flex flex-col">
+<div class="text-2xl font-bold text-secondary mb-10">Menu</div>
+<nav class="space-y-2 flex-grow">
+<a class="flex items-center gap-4 p-4 bg-surface-container-low text-secondary rounded-xl font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+                </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-xl font-semibold text-sm transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span> Payments
+                </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-xl font-semibold text-sm transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span> Transfers
+                </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-xl font-semibold text-sm transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span> Cards
+                </a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low rounded-xl font-semibold text-sm transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+                </a>
+</nav>
+</div>
+</div>
+</body></html>

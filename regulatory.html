@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pago Fácil — Регулирование и лицензии</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="shared.css"/>
+</head>
+<body class="bg-slate-50">
+    <div id="site-nav"></div>
+
+    <section class="pt-40 pb-32">
+        <div class="max-w-4xl mx-auto px-8">
+            <h1 class="text-5xl md:text-7xl font-black text-[#0A1628] mb-12 tracking-tighter text-center">Юридический статус</h1>
+            
+            <div class="space-y-12">
+                <div class="bg-white p-12 rounded-[48px] shadow-premium border border-slate-100">
+                    <div class="flex items-center gap-6 mb-8 pb-8 border-b border-slate-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Logo_del_Banco_de_Espa%C3%B1a.svg/1200px-Logo_del_Banco_de_Espa%C3%B1a.svg.png" alt="Banco de España" class="h-16 w-auto grayscale opacity-50">
+                        <div>
+                            <h2 class="text-3xl font-black text-[#0A1628]">Лицензия Банка Испании</h2>
+                            <p class="text-blue-600 font-bold tracking-widest text-sm uppercase">Регистрационный номер D950</p>
+                        </div>
+                    </div>
+                    <div class="prose prose-slate max-w-none text-slate-600 space-y-6">
+                        <p>Pago-Facil управляется компанией <strong>Stratford Solutions, S.L.</strong>, которая строго придерживается стандартов соответствия Европейского Союза и местного испанского законодательства.</p>
+                        <p>Мы официально зарегистрированы и находимся под надзором Банка Испании (Banco de España) как поставщик услуг по обмену виртуальных валют на фиатные валюты, а также услуг по хранению электронных кошельков.</p>
+                        <p>Эта регистрация гарантирует, что Pago-Facil соблюдает строгие директивы по борьбе с отмыванием денег (AML) и противодействию финансированию терроризма (CTF), установленные испанским правом и европейскими нормами (AMLD5/AMLD6).</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-10 rounded-[32px] border border-slate-100">
+                        <h3 class="text-xl font-black text-[#0A1628] mb-4">AML & KYC Framework</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Все пользователи проходят обязательную проверку личности (KYC) или проверку бизнеса (KYB) перед использованием платформы.</p>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Постоянный мониторинг транзакций</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Сертифицированные AML-офицеры</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Соблюдение Money Laundering Reporting</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-10 rounded-[32px] border border-slate-100">
+                        <h3 class="text-xl font-black text-[#0A1628] mb-4">Безопасность активов</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Мы сотрудничаем с ведущими кастодиальными решениями и мировыми банковскими системами.</p>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-500 text-lg">check_circle</span> SEPA и SWIFT сети</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-500 text-lg">check_circle</span> Регулярный финансовый аудит</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-500 text-lg">check_circle</span> Прозрачность операций</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center pt-10">
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Сведения о компании</p>
+                    <p class="text-slate-500 text-sm">
+                        Stratford Solutions, S.L., CIF: B70711668.<br>
+                        Doctor Benapres, number 36, 08870, Sitges, Barcelona, Spain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script src="shared.js"></script>
+    <script>initPage('regulatory');</script>
+</body>
+</html>

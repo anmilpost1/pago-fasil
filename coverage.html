@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pago Fácil — Глобальное покрытие</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="shared.css"/>
+</head>
+<body class="bg-white">
+    <div id="site-nav"></div>
+
+    <section class="pt-40 pb-32 premium-gradient text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500 rounded-full blur-[150px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+            <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter">Выплаты в Евро <br/><span class="text-gradient">по всему миру</span></h1>
+            <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12">
+                Pago-Facil обеспечивает банковские переводы в Евро (€) через системы SEPA и SWIFT получателям в любой точке земного шара.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
+                    <span class="block text-3xl font-bold mb-1">SEPA</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest">Европейская экономическая зона</span>
+                </div>
+                <div class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
+                    <span class="block text-3xl font-bold mb-1">SWIFT</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest">Международные переводы</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-black text-[#0A1628] mb-8 tracking-tight">Ваш бизнес без границ</h2>
+                    <p class="text-slate-500 text-lg leading-relaxed mb-10">
+                        Мы используем современные банковские шлюзы для обеспечения максимальной скорости и надежности каждого перевода.
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600 shrink-0"><span class="material-symbols-outlined text-3xl">speed</span></div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Обработка в тот же день</h4>
+                                <p class="text-slate-500">Большинство платежей обрабатываются и отправляются в течение нескольких часов.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600 shrink-0"><span class="material-symbols-outlined text-3xl">monitoring</span></div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Полное отслеживание</h4>
+                                <p class="text-slate-500">Контролируйте статус каждой транзакции в реальном времени через ваш личный кабинет.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600 shrink-0"><span class="material-symbols-outlined text-3xl">euro</span></div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Все расчеты в Евро (€)</h4>
+                                <p class="text-slate-500">Минимизируйте потери на конвертации за счет прямой работы с основной валютой ЕС.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white p-4 rounded-[40px] shadow-premium border border-slate-100">
+                        <img src="https://pago-facil.com/wp-content/uploads/2026/04/world-map-dark.png" alt="World Coverage" class="w-full h-auto rounded-[32px] opacity-20 grayscale brightness-0">
+                        <!-- Pseudo overlay for interactive feel -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-[#0A1628] text-white p-8 rounded-3xl shadow-2xl space-y-4 max-w-xs transform -rotate-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-bold uppercase tracking-widest text-xs opacity-50">Active Region</span>
+                                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                </div>
+                                <p class="text-2xl font-black">European Union</p>
+                                <p class="text-sm opacity-70">Instant SEPA payments supported for all member states.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script src="shared.js"></script>
+    <script>initPage('coverage');</script>
+</body>
+</html>
