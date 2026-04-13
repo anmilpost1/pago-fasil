@@ -1,88 +1,179 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="ru">
+<html class="light" lang="ru">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Pago Fácil — Контакты</title>
+    <title>Связаться с нами | Pago Fácil</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#005946",
+              "secondary": "#003ec6",
+              "background": "#f9f9ff",
+              "surface": "#f9f9ff",
+            },
+          },
+        },
+      }
     </script>
     <link rel="stylesheet" href="shared.css"/>
 </head>
-<body class="bg-slate-50">
+<body class="bg-surface text-slate-900 selection:bg-emerald-100">
     <div id="site-nav"></div>
 
-    <section class="pt-40 pb-32">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-20">
-                <h1 class="text-6xl font-black text-[#0A1628] mb-6 tracking-tighter">Свяжитесь с нами</h1>
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto">Наша команда поддержки готова помочь вам с любыми вопросами по платежам и комплаенсу.</p>
-            </div>
+    <main class="pt-32 pb-20">
+        <section class="max-w-7xl mx-auto px-6 md:px-12 mb-32">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-5xl font-extrabold text-slate-900 leading-tight mb-2">Кто мы</h2>
+                        <span class="text-emerald-700 font-bold tracking-widest text-xs uppercase mb-6 block">Миссия и ценности</span>
+<p class="text-lg text-slate-600 leading-relaxed">
+В Pago Fácil мы — молодая, динамичная и амбициозная команда специалистов. Мы создаем среду, где каждый отдел работает в синергии, гарантируя безупречное выполнение операций. Мы стремимся окружать себя лучшими талантами и всегда открыты для людей, разделяющих наши ценности и мотивацию к росту.
+</p>
+</div>
 
-            <div class="grid lg:grid-cols-3 gap-12 items-start">
-                <!-- Info cards -->
-                <div class="lg:col-span-1 space-y-6">
-                    <div class="bg-white p-10 rounded-[40px] shadow-premium border border-slate-100">
-                        <div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600 mb-6"><span class="material-symbols-outlined">mail</span></div>
-                        <h4 class="font-bold text-lg mb-2">Напишите нам</h4>
-                        <p class="text-slate-500 text-sm mb-4">Для общих вопросов и поддержки:</p>
-                        <a href="mailto:support@pago-facil.com" class="text-blue-600 font-bold hover:underline">support@pago-facil.com</a>
-                    </div>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-ambient group hover:border-emerald-200 transition-colors">
+<div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
+<span class="material-symbols-outlined text-emerald-700 group-hover:text-white" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Близость</h3>
+<p class="text-slate-500 text-sm">Мы строим отношения с пользователями на основе доверия и долгосрочного партнерства.</p>
+</div>
+
+<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-ambient group hover:border-blue-200 transition-colors">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined text-blue-700 group-hover:text-white" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Честность</h3>
+<p class="text-slate-500 text-sm">Фундаментальная этика и ответственность перед сообществом в каждом нашем решении.</p>
+</div>
+
+<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-ambient group hover:border-emerald-200 transition-colors">
+<div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
+<span class="material-symbols-outlined text-emerald-700 group-hover:text-white" style="font-variation-settings: 'FILL' 1;">shield_check</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Безопасность</h3>
+<p class="text-slate-500 text-sm">Мы гарантируем защиту данных и стабильность операционной среды для вашего спокойствия.</p>
+</div>
+
+<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-ambient group hover:border-blue-200 transition-colors">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined text-blue-700 group-hover:text-white" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Прозрачность</h3>
+<p class="text-slate-500 text-sm">Каждая транзакция ясна и понятна. Мы держим клиентов в курсе всех процессов и затрат.</p>
+</div>
+</div>
+</div>
+
+                <div class="relative group">
+                    <div class="absolute -top-20 -right-20 w-96 h-96 bg-emerald-100/50 rounded-full blur-3xl -z-10"></div>
+                    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl -z-10"></div>
                     
-                    <div class="bg-white p-10 rounded-[40px] shadow-premium border border-slate-100">
-                        <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-[#0A1628] mb-6"><span class="material-symbols-outlined">location_on</span></div>
-                        <h4 class="font-bold text-lg mb-2">Офис в Испании</h4>
-                        <p class="text-slate-500 text-sm">Doctor Benapres, 36,<br>08870, Sitges,<br>Barcelona, Spain.</p>
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white relative h-[600px]">
+                        <div id="photo-slider" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070" class="w-full h-full object-cover shrink-0" alt="Team 1">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069" class="w-full h-full object-cover shrink-0" alt="Office 1">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1974" class="w-full h-full object-cover shrink-0" alt="Collaboration">
+                        </div>
+                        
+                        <!-- Slider Controls -->
+                        <button onclick="moveSlider(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md hover:bg-white/40 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100 z-10">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button onclick="moveSlider(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md hover:bg-white/40 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100 z-10">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+
+                    <div class="absolute -bottom-10 -right-10 bg-white p-8 rounded-3xl shadow-xl border border-slate-50 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="text-4xl font-black text-emerald-700">10+</div>
+<div class="text-sm font-bold text-slate-500 leading-tight uppercase">Лет опыта в<br/>финтех сфере</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+        <section class="max-w-7xl mx-auto px-6 md:px-12 mb-24">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">Напишите нам</h2>
+                <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">
+                    Мы всегда рады помочь. Наша команда экспертов готова ответить на ваши вопросы и предложить лучшие финансовые решения.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left Column: Contact Form -->
+            <div class="lg:col-span-7 bg-white rounded-xl p-8 md:p-10 border border-slate-100 shadow-sm">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold uppercase tracking-widest text-slate-400">Имя</label>
+                            <input class="w-full bg-slate-50 border-none rounded-lg p-4 focus:ring-2 focus:ring-emerald-500/20 text-slate-900 transition-all" placeholder="Александр Петров" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold uppercase tracking-widest text-slate-400">Email</label>
+                            <input class="w-full bg-slate-50 border-none rounded-lg p-4 focus:ring-2 focus:ring-emerald-500/20 text-slate-900 transition-all" placeholder="alex@example.com" type="email"/>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-semibold uppercase tracking-widest text-slate-400">Сообщение</label>
+                        <textarea class="w-full bg-slate-50 border-none rounded-lg p-4 focus:ring-2 focus:ring-emerald-500/20 text-slate-900 transition-all resize-none" placeholder="Как мы можем вам помочь?" rows="5"></textarea>
+                    </div>
+                    <button class="w-full md:w-auto primary-gradient text-white font-bold px-12 py-4 rounded-full hover:shadow-lg hover:shadow-emerald-900/20 transition-all active:scale-95" type="submit">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Column: Contact Cards -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <div class="bg-white p-6 rounded-xl flex items-start gap-4 shadow-sm border border-slate-100">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 shrink-0">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Email</h3>
+                        <p class="text-lg font-bold">gbtc@gbtcfinance.com</p>
                     </div>
                 </div>
-
-                <!-- Form -->
-                <div class="lg:col-span-2 bg-[#0A1628] p-12 rounded-[48px] shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full blur-[100px]"></div>
-                    <form class="space-y-8 relative z-10">
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="space-y-2">
-                                <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Ваше имя</label>
-                                <input type="text" placeholder="Иван Иванов" class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Email для связи</label>
-                                <input type="email" placeholder="example@mail.com" class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors">
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Тип обращения</label>
-                            <select class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors appearance-none">
-                                <option class="bg-[#0A1628]">Личный платеж</option>
-                                <option class="bg-[#0A1628]">Бизнес-интеграция</option>
-                                <option class="bg-[#0A1628]">Вопрос по комплаенсу</option>
-                                <option class="bg-[#0A1628]">Другое</option>
-                            </select>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Сообщение</label>
-                            <textarea rows="4" placeholder="Опишите ваш вопрос..." class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 transition-colors"></textarea>
-                        </div>
-                        <button type="submit" class="w-full accent-gradient text-white py-5 rounded-2xl font-black text-lg hover:shadow-[0_0_30px_rgba(0,82,254,0.3)] hover:scale-[1.01] transition-all">Отправить сообщение</button>
-                    </form>
+                <div class="bg-white p-6 rounded-xl flex items-start gap-4 shadow-sm border border-slate-100">
+                    <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700 shrink-0">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Офис</h3>
+                        <p class="text-lg font-bold">Avenida Cerdanyola, 77 - 4ºD, Sant Cugat del Valles, 08172 - Barcelona, España</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div id="site-footer"></div>
     <script src="shared.js"></script>
-    <script>initPage('contact');</script>
+    <script>
+        initPage('contact');
+        
+        let currentSlide = 0;
+        const slider = document.getElementById('photo-slider');
+        const slides = slider.children.length;
+
+        function moveSlider(direction) {
+            currentSlide = (currentSlide + direction + slides) % slides;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Auto slide
+        setInterval(() => moveSlider(1), 5000);
+    </script>
 </body>
 </html>

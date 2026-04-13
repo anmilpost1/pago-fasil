@@ -1,39 +1,22 @@
-/* Shared design system for Pago Fácil */
-:root {
-    --primary: #0A1628;
-    --accent: #0052FE;
-    --surface: #F9FBFF;
-    --text: #1A202C;
-    --text-light: #64748B;
-}
+/* Shared head template for all Pago Fácil pages */
+/* Include this in every page after tailwind config */
 
-body { 
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--text);
-    background-color: var(--surface);
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
-
-.premium-gradient {
-    background: linear-gradient(135deg, #0A1628 0%, #1a2a44 100%);
+.kinetic-vault-gradient {
+    background: linear-gradient(135deg, #0A1628 0%, #0052fe 100%);
 }
-
-.accent-gradient {
-    background: linear-gradient(135deg, #0052FE 0%, #60A5FA 100%);
+.primary-gradient {
+    background: linear-gradient(135deg, #005946 0%, #55fcd0 100%);
 }
-
-.glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.secondary-gradient {
+    background: linear-gradient(180deg, #003ec6 0%, #0052fe 100%);
 }
-
-.shadow-premium {
-    box-shadow: 0 20px 40px -15px rgba(10, 22, 40, 0.1);
+.kinetic-shadow {
+    box-shadow: 0 10px 30px -10px rgba(16, 28, 46, 0.08);
 }
-
-.text-gradient {
-    background: linear-gradient(135deg, #0052FE 0%, #60A5FA 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.shadow-ambient {
+    box-shadow: 0 10px 24px -4px rgba(16, 28, 46, 0.06);
 }

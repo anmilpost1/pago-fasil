@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Наши магазины | Pago Fácil</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#005946",
+              "secondary": "#003ec6",
+              "background": "#f9f9ff",
+              "surface": "#f9f9ff",
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="shared.css"/>
+</head>
+<body class="bg-background text-slate-900">
+    <div id="site-nav"></div>
+
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <header class="text-center mb-20">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">Наши магазины</h1>
+            <p class="text-xl md:text-2xl text-slate-500 font-medium max-w-3xl mx-auto">
+                Найдите ближайший физический пункт обмена криптовалют GBTC Finance. Безопасные и быстрые операции прямо в вашем городе.
+            </p>
+        </header>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Store Cards -->
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Барселона</h3>
+                    <p class="text-slate-500 text-sm mb-6">Главный офис и центр обмена криптовалют в самом сердце Барселоны.</p>
+                </div>
+                <a href="stores/barcelona.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Мадрид</h3>
+                    <p class="text-slate-500 text-sm mb-6">Ваш надежный партнер для покупки и продажи биткоинов в столице Испании.</p>
+                </div>
+                <a href="stores/madrid.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Валенсия</h3>
+                    <p class="text-slate-500 text-sm mb-6">Удобный пункт обмена с квалифицированным персоналом в Валенсии.</p>
+                </div>
+                <a href="stores/valencia.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Мальорка</h3>
+                    <p class="text-slate-500 text-sm mb-6">Операции с криптовалютой на Балеарских островах теперь проще простого.</p>
+                </div>
+                <a href="stores/mallorca.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ибица</h3>
+                    <p class="text-slate-500 text-sm mb-6">Безопасный обмен криптовалюты во время вашего отдыха на Ибице.</p>
+                </div>
+                <a href="stores/ibiza.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Сан-Кугат</h3>
+                    <p class="text-slate-500 text-sm mb-6">Наш передовой офис в Сан-Кугат-дель-Вальес.</p>
+                </div>
+                <a href="stores/sant-cugat.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Гран-Канария</h3>
+                    <p class="text-slate-500 text-sm mb-6">Обмен криптовалют на Канарских островах теперь доступен каждому.</p>
+                </div>
+                <a href="stores/gran-canaria.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Малага</h3>
+                    <p class="text-slate-500 text-sm mb-6">Продажа и покупка криптовалюты в солнечной Малаге.</p>
+                </div>
+                <a href="stores/malaga.html" class="inline-flex items-center justify-center w-full py-3 bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-700 font-bold rounded-xl transition-all no-underline">
+                    Подробнее
+                    <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="mt-32 py-20 bg-emerald-900 rounded-[3rem] text-white text-center px-6 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-400 opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <h2 class="text-4xl font-bold mb-6">Готовы посетить нас?</h2>
+            <p class="text-emerald-100 max-w-xl mx-auto mb-10 text-lg">
+                Запишитесь на консультацию или просто приходите в любой из наших офисов в рабочее время. Мы всегда рады помочь!
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://wa.me/34692902386" target="_blank" class="bg-white text-emerald-900 px-10 py-4 rounded-xl font-bold text-lg hover:scale-95 transition-all no-underline flex items-center gap-2">
+                    <span class="material-symbols-outlined">chat</span>
+                    WhatsApp
+                </a>
+                <a href="contact.html" class="border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all no-underline">
+                    Контакты
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="shared.js"></script>
+    <script>initPage('stores');</script>
+</body>
+</html>
