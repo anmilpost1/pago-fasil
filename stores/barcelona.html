@@ -12,13 +12,61 @@
         theme: {
           extend: {
             colors: {
+              "on-tertiary-fixed": "#101c2e",
+              "surface-tint": "#006b55",
+              "surface-dim": "#cfdaf3",
+              "surface-container-low": "#f0f3ff",
+              "on-background": "#101c2e",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#d7e3fc",
+              "on-secondary-fixed": "#001452",
+              "secondary-container": "#0052fe",
+              "surface-bright": "#f9f9ff",
+              "inverse-on-surface": "#ecf0ff",
+              "on-secondary-container": "#dfe3ff",
+              "on-secondary-fixed-variant": "#0038b6",
+              "on-tertiary-container": "#d9e5fe",
+              "outline-variant": "#c3c5d9",
+              "primary-fixed": "#55fcd0",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#dfe8ff",
               "primary": "#005946",
-              "secondary": "#003ec6",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#bbc7df",
+              "tertiary": "#434e63",
               "background": "#f9f9ff",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#d7e3fc",
+              "surface-variant": "#d7e3fc",
+              "on-surface": "#101c2e",
+              "on-tertiary-fixed-variant": "#3c475b",
+              "outline": "#737688",
+              "inverse-surface": "#253144",
+              "on-surface-variant": "#434656",
+              "on-error": "#ffffff",
+              "primary-container": "#00745c",
+              "inverse-primary": "#28dfb5",
+              "secondary-fixed-dim": "#b7c4ff",
+              "secondary": "#003ec6",
+              "on-primary-fixed": "#002118",
+              "on-primary-fixed-variant": "#00513f",
               "surface": "#f9f9ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e7eeff",
+              "on-primary-container": "#58ffd2",
+              "primary-fixed-dim": "#28dfb5",
+              "secondary-fixed": "#dde1ff",
+              "tertiary-container": "#5b667c"
             },
-          },
-        },
+            fontFamily: {
+              headline: ["Inter"],
+              body: ["Inter"],
+              label: ["Inter"]
+            }
+          }
+        }
       }
     </script>
     <link rel="stylesheet" href="../shared.css"/>
@@ -32,93 +80,164 @@
             Все магазины
         </a>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
-            <div class="space-y-12">
-                <header>
-                    <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Главный офис</span>
-                    <h1 class="text-5xl font-extrabold tracking-tight mb-4">Барселона</h1>
-                    <p class="text-xl text-slate-500 font-medium leading-relaxed">
-                        Наш флагманский магазин в Барселоне предлагает полный спектр услуг по обмену криптовалют в безопасной и комфортной обстановке.
+        <div class="space-y-16">
+            <header class="max-w-3xl">
+                <h1 class="text-6xl font-extrabold tracking-tight mb-6">Барселона</h1>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                    Посетите наши магазины GBTC в Барселоне, расположенные в Sagrada Familia, Born, Universitat, Sarrià и Hospitalet, для уникального опыта покупки и продажи криптовалют.
+                </p>
+            </header>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Branch 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-6">
+                    <div class="bg-emerald-50 w-12 h-12 rounded-xl flex items-center justify-center text-emerald-700">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">GBTC Sagrada Familia</h3>
+                        <p class="text-slate-600 text-sm mb-4">C/ de Sicília, 288, 08013 Barcelona</p>
+                        <div class="space-y-1 text-sm text-slate-500">
+                            <p>Пн - Пт: 11:00 – 15:00, 16:00 – 20:00</p>
+                            <p>Сб: 11:00 – 15:00</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34640163453" class="block w-full text-center py-3 bg-slate-50 text-slate-700 rounded-xl font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                        Связаться: +34 640 163 453
+                    </a>
+                </div>
+
+                <!-- Branch 2 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-6">
+                    <div class="bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center text-blue-700">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">GBTC Sarrià</h3>
+                        <p class="text-slate-600 text-sm mb-4">C/ de Beethoven, 9, 08021 Barcelona</p>
+                        <div class="space-y-1 text-sm text-slate-500">
+                            <p>Пн - Пт: 10:00 – 18:00</p>
+                            <p>Сб - Вс: Выходной</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34605732732" class="block w-full text-center py-3 bg-slate-50 text-slate-700 rounded-xl font-bold hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                        Связаться: +34 605 732 732
+                    </a>
+                </div>
+
+                <!-- Branch 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-6">
+                    <div class="bg-emerald-50 w-12 h-12 rounded-xl flex items-center justify-center text-emerald-700">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">GBTC Les Corts</h3>
+                        <p class="text-slate-600 text-sm mb-4">Carrer d'Arizala, 57, 08028 Barcelona</p>
+                        <div class="space-y-1 text-sm text-slate-500">
+                            <p>Пн - Пт: 10:00 – 14:00, 16:00 – 20:00</p>
+                            <p>Сб: 11:00 – 15:00</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/34602666968" class="block w-full text-center py-3 bg-slate-50 text-slate-700 rounded-xl font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+                        Связаться: +34 602 666 968
+                    </a>
+                </div>
+            </div>
+
+            <section class="grid md:grid-cols-2 gap-12 items-center py-16 bg-white rounded-[3rem] px-8 md:px-16 shadow-sm border border-slate-100">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Профессиональная ориентация</h2>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Мир криптовалют может быть сложным. Поэтому в наших магазинах в Барселоне мы предлагаем экспертные, персонализированные советы. Мы ведем как новых пользователей, так и опытных инвесторов.
                     </p>
-                </header>
-
-                <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-8">
-                    <div class="flex items-start gap-4">
-                        <div class="p-3 bg-emerald-50 rounded-xl text-emerald-700">
-                            <span class="material-symbols-outlined">location_on</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg">Адрес</h3>
-                            <p class="text-slate-600">Carrer de Pelai, 11, 08001 Barcelona, Spain</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="p-3 bg-blue-50 rounded-xl text-blue-700">
-                            <span class="material-symbols-outlined">schedule</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg">Часы работы</h3>
-                            <p class="text-slate-600">Пн - Пт: 10:00 - 14:00, 16:00 - 20:00</p>
-                            <p class="text-slate-600">Сб: 10:00 - 14:00</p>
-                            <p class="text-slate-400">Вс: Выходной</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="p-3 bg-amber-50 rounded-xl text-amber-700">
-                            <span class="material-symbols-outlined">payments</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg">Минимальная сумма</h3>
-                            <p class="text-slate-600">Обмен от 10 EUR.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/34692902386" target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all no-underline flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/20">
-                        <span class="material-symbols-outlined text-xl">chat</span>
-                        Записаться к менеджеру
-                    </a>
-                    <a href="https://app.gbtcfinance.es/register?r=63932174" class="flex-1 bg-slate-900 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 active:scale-95 transition-all no-underline flex items-center justify-center gap-2">
-                        Начать онлайн
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                <div class="rounded-[2rem] overflow-hidden shadow-2xl relative group h-[400px]">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc92IgNz2Ee7UeMU5SUBoOD0WbzC1Ag9qm04OK0uWmyYhmy5zZ10VJy1UmSCWhe5jv36J88tBx6DB4H0yXMcIRtO_HePcb9b_GKplz4u9D3A3Nhst_6_wO36AN0Bq3NUL5bUfvMuc8VaPjZfeVk529lcMYCMtpc1pMN-rZQKjjBPzNm4eBB8crEa-aq8eoMfdIFR_HjxLf-FWLNjmDIQ9ukn4a2pgFwIslsTjzuVqz1GWTeyzXw-7O8YrHBCIF1eFUt4geVP2qBQ" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="BCN Store">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                        <p class="text-white font-medium text-lg">Ваш комфорт и безопасность — наш приоритет.</p>
-                    </div>
-                </div>
-
-                <div class="bg-blue-900 text-white rounded-3xl p-8 space-y-6">
-                    <h3 class="text-2xl font-bold">Доступные услуги:</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl">
-                            <span class="material-symbols-outlined text-[#00D4AA]">currency_bitcoin</span>
-                            <span class="font-medium">Купля/Продажа</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl">
-                            <span class="material-symbols-outlined text-[#00D4AA]">support_agent</span>
-                            <span class="font-medium">Консультации</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl">
-                            <span class="material-symbols-outlined text-[#00D4AA]">shopping_basket</span>
-                            <span class="font-medium">Мерчандайзинг</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl">
-                            <span class="material-symbols-outlined text-[#00D4AA]">lock</span>
-                            <span class="font-medium">Холодные кошельки</span>
-                        </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 font-bold"><span class="material-symbols-outlined text-emerald-600">check_circle</span> Гарантированная безопасность</div>
+                        <div class="flex items-center gap-3 font-bold"><span class="material-symbols-outlined text-emerald-600">check_circle</span> Большой выбор криптовалют (BTC, ETH, Altcoins)</div>
+                        <div class="flex items-center gap-3 font-bold"><span class="material-symbols-outlined text-emerald-600">check_circle</span> Поддержка на нескольких языках</div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <section class="py-24 bg-surface-container-low" id="faq">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-on-surface mb-4">Часто задаваемые вопросы</h2>
+                        <div class="w-20 h-1.5 bg-secondary rounded-full mx-auto"></div>
+                    </div>
+                
+                    <div class="space-y-4">
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Как мне начать торговать криптовалютами в магазинах Барселоны?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Зарегистрируйтесь на app.gbtcfinance.es/register или отсканируйте QR-код в любом из наших магазинов в Барселоне. Укажите свое имя, адрес электронной почты, гражданство и действующий документ, удостоверяющий личность.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Какие услуги предлагают магазины в Барселоне?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Наши магазины в Барселоне предлагают покупку и продажу криптовалют, продажу мерчандайзинга и аппаратных кошельков, персональные консультации, поддержку при возникновении вопросов и базовое обучение для новичков.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Каковы комиссии за транзакции в Барселоне?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Комиссии в Барселоне составляют 8% за покупку и 5% за продажу криптовалют.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Существуют ли лимиты на наличные операции в магазинах Барселоны?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Да, лимиты варьируются в зависимости от уровня KYC клиента. Для резидентов Испании лимит составляет 999 евро в месяц, для нерезидентов — 9999 евро в месяц. Эти лимиты увеличиваются при прохождении KYC уровня 2.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Что мне нужно для прохождения KYC уровня 2?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Вам необходимо загрузить три фотографии вашего документа, удостоверяющего личность, на нашем сайте: лицевую сторону, оборотную сторону и селфи с документом.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Безопасно ли проводить P2P-транзакции в магазинах GBTC в Барселоне?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Мы не поощряем и не содействуем P2P-транзакциям в наших магазинах из-за связанных с ними рисков. Мы обеспечиваем безопасную и регулируемую среду для всех криптовалютных операций.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 cursor-pointer group hover:bg-surface-bright transition-all">
+                            <details class="group">
+                                <summary class="flex justify-between items-center list-none outline-none">
+                                    <h4 class="text-lg font-bold text-on-surface">Какие криптовалюты доступны в магазинах Барселоны?</h4>
+                                    <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-on-surface-variant leading-relaxed">Мы предлагаем широкий выбор криптовалют, исключая те, которые очень специфичны или доступны только на децентрализованных биржах.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </main>
 
     <div id="site-footer"></div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>GBTC Finance Валенсия | Pago Fácil</title>
+    <title>GBTC Finance Ибица | Pago Fácil</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -12,13 +12,61 @@
         theme: {
           extend: {
             colors: {
+              "on-tertiary-fixed": "#101c2e",
+              "surface-tint": "#006b55",
+              "surface-dim": "#cfdaf3",
+              "surface-container-low": "#f0f3ff",
+              "on-background": "#101c2e",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#d7e3fc",
+              "on-secondary-fixed": "#001452",
+              "secondary-container": "#0052fe",
+              "surface-bright": "#f9f9ff",
+              "inverse-on-surface": "#ecf0ff",
+              "on-secondary-container": "#dfe3ff",
+              "on-secondary-fixed-variant": "#0038b6",
+              "on-tertiary-container": "#d9e5fe",
+              "outline-variant": "#c3c5d9",
+              "primary-fixed": "#55fcd0",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#dfe8ff",
               "primary": "#005946",
-              "secondary": "#003ec6",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#bbc7df",
+              "tertiary": "#434e63",
               "background": "#f9f9ff",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#d7e3fc",
+              "surface-variant": "#d7e3fc",
+              "on-surface": "#101c2e",
+              "on-tertiary-fixed-variant": "#3c475b",
+              "outline": "#737688",
+              "inverse-surface": "#253144",
+              "on-surface-variant": "#434656",
+              "on-error": "#ffffff",
+              "primary-container": "#00745c",
+              "inverse-primary": "#28dfb5",
+              "secondary-fixed-dim": "#b7c4ff",
+              "secondary": "#003ec6",
+              "on-primary-fixed": "#002118",
+              "on-primary-fixed-variant": "#00513f",
               "surface": "#f9f9ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e7eeff",
+              "on-primary-container": "#58ffd2",
+              "primary-fixed-dim": "#28dfb5",
+              "secondary-fixed": "#dde1ff",
+              "tertiary-container": "#5b667c"
             },
-          },
-        },
+            fontFamily: {
+              headline: ["Inter"],
+              body: ["Inter"],
+              label: ["Inter"]
+            }
+          }
+        }
       }
     </script>
     <link rel="stylesheet" href="../shared.css"/>
@@ -32,15 +80,15 @@
             Все магазины
         </a>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-start">
-            <div class="space-y-12">
-                <header>
-                    <h1 class="text-5xl font-extrabold tracking-tight mb-4">Валенсия</h1>
-                    <p class="text-xl text-slate-500 font-medium leading-relaxed">
-                        Ваш надежный пункт обмена криптовалют в Валенсии. Быстрое обслуживание и профессиональные консультации.
-                    </p>
-                </header>
+        <div class="space-y-16">
+            <header class="max-w-3xl">
+                <h1 class="text-6xl font-extrabold tracking-tight mb-6">Ибица</h1>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed">
+                    Покупайте и продавайте биткоины на Ибице безопасно с помощью наших экспертов. Профессиональный обмен в самом сердце Белого острова.
+                </p>
+            </header>
 
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm space-y-8">
                     <div class="flex items-start gap-4">
                         <div class="p-3 bg-emerald-50 rounded-xl text-emerald-700">
@@ -48,7 +96,7 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg">Адрес</h3>
-                            <p class="text-slate-600">Av. de les Corts Valencianes, 39, 46015 València, Spain</p>
+                            <p class="text-slate-600">Carrer de la Mare de Déu, 14, 07800 Eivissa, Illes Balears, Spain</p>
                         </div>
                     </div>
 
@@ -58,26 +106,124 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg">Часы работы</h3>
-                            <p class="text-slate-600">Пн - Пт: 10:00 - 14:00, 16:00 - 20:00</p>
+                            <p class="text-slate-600">Пн - Пт: 10:00 – 14:00, 16:00 – 20:00</p>
                             <p class="text-slate-400">Сб - Вс: Выходной</p>
                         </div>
                     </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-amber-50 rounded-xl text-amber-700">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Комиссии</h3>
+                            <p class="text-slate-600">Покупка: 8% | Продажа: 5%</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/34624238323" class="flex items-center justify-center gap-2 w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold hover:brightness-110 transition-all no-underline">
+                            <span class="material-symbols-outlined">chat</span>
+                            WhatsApp: +34 624 23 83 23
+                        </a>
+                    </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/34692902386" target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-4 rounded-2xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all no-underline flex items-center justify-center gap-2">
-                        <span class="material-symbols-outlined text-xl">chat</span>
-                        WhatsApp
-                    </a>
-                    <a href="https://app.gbtcfinance.es/register?r=63932174" class="flex-1 bg-slate-900 text-white text-center py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 active:scale-95 transition-all no-underline">
-                        Онлайн регистрация
-                    </a>
+                <div class="bg-slate-900 text-white rounded-3xl p-10 space-y-8">
+                    <h3 class="text-2xl font-bold">Сервис для трейдеров</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Мы предлагаем специализированные консультации и помощь трейдерам с высокими объемами операций. На Ибице мы обеспечиваем полную конфиденциальность и скорость.
+                    </p>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <h4 class="font-bold mb-2">Переводы и крупные сделки</h4>
+                        <p class="text-sm text-slate-400">Помогаем с банковскими переводами и внебиржевыми (OTC) операциями для вашего удобства.</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="bg-slate-100 rounded-[2rem] h-[400px] flex items-center justify-center text-slate-400">
-                <span class="material-symbols-outlined text-8xl opacity-20">storefront</span>
-            </div>
+
+            <section class="max-w-4xl mx-auto space-y-8 py-16">
+                <div class="space-y-4">
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Как мне начать покупать или продавать криптовалюты в магазине на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Для начала зарегистрируйтесь на нашей онлайн-платформе app.gbtcfinance.es/register или используйте QR-код, доступный в магазине. Заполните необходимую информацию, включая полное имя, адрес электронной почты, гражданство и тип документа, удостоверяющего личность.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Что я могу найти в магазине на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Наши услуги включают покупку и продажу криптовалют, персональные консультации и техническую поддержку по любым вопросам.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Какова текущая стоимость операций на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Комиссии составляют 5% за покупку и 4% за продажу криптовалют. Эти значения могут корректироваться в зависимости от рыночных тенденций.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Существуют ли лимиты на наличные операции на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Да, лимиты варьируются в зависимости от вашего уровня KYC. Для резидентов Испании начальный лимит составляет 999 евро в месяц, в то время как для нерезидентов он составляет 9999 евро в месяц. При прохождении KYC уровня 2 эти лимиты значительно увеличиваются.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Что мне нужно для перехода на уровень KYC 2 на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Вам нужно будет загрузить три фотографии вашего документа, удостоверяющего личность, на нашу платформу: лицевую сторону, оборотную сторону и селфи с документом, убедившись, что все они четкие и читаемые.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Можно ли купить криптовалюту анонимно на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Законодательство требует процесса идентификации для всех покупок. Мы сохраняем вашу информацию конфиденциальной, но полная анонимность невозможна.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Могу ли я совершать P2P-транзакции в магазине на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Мы понимаем интерес к P2P-транзакциям, однако они могут быть рискованными и подверженными мошенничеству. Наш магазин предоставляет полностью регулируемую и безопасную среду для покупки и продажи криптовалют.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-lg list-none">
+                            Какой диапазон криптовалют доступен на Ибице?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Мы предлагаем широкий выбор криптовалют за некоторыми исключениями. Если вы ищете конкретную криптовалюту, и у нас ее нет, мы поможем вам ее найти.
+                        </p>
+                    </details>
+                </div>
+            </section>
         </div>
     </main>
 
