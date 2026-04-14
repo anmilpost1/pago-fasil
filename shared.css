@@ -3,7 +3,15 @@
 
 body { font-family: 'Inter', sans-serif; }
 .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
 }
 .kinetic-vault-gradient {
     background: linear-gradient(135deg, #0A1628 0%, #0052fe 100%);
