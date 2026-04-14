@@ -13,6 +13,7 @@ function getNavHTML(activePage, basePath = '') {
             ]
         },
         { id: 'pricing', label: 'Тарифы', href: 'pricing.html', icon: 'payments' },
+        { id: 'blog', label: 'Блог', href: 'blog.html', icon: 'article' },
         { id: 'contact', label: 'Контакты', href: 'contact.html', icon: 'support_agent' },
     ];
 
@@ -125,6 +126,7 @@ function getFooterHTML(basePath = '') {
                         <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}services.html">Услуги</a></li>
                         <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}pricing.html">Тарифы</a></li>
                         <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}stores.html">Магазины</a></li>
+                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}blog.html">Блог</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">
