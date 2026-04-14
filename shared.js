@@ -21,10 +21,10 @@ function getNavHTML(activePage, basePath = '') {
             const isActive = p.id === activePage || p.children.some(c => c.id === activePage);
             const mainCls = isActive
                 ? 'text-emerald-900 font-bold border-b-2 border-emerald-600 pb-0.5 text-sm transition-colors flex items-center gap-1'
-                : 'text-emerald-900/80 hover:text-emerald-900 transition-colors font-semibold text-sm flex items-center gap-1';
+                : 'text-slate-600 hover:text-emerald-900 transition-colors font-medium text-sm flex items-center gap-1';
             
             const dropLinks = p.children.map(c => `
-                <a href="${basePath}${c.href}" class="block px-4 py-2.5 text-sm text-emerald-900/80 hover:text-emerald-900 hover:bg-emerald-50 rounded-lg transition-colors no-underline whitespace-nowrap">
+                <a href="${basePath}${c.href}" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-emerald-900 hover:bg-emerald-50 rounded-lg transition-colors no-underline whitespace-nowrap">
                     ${c.label}
                 </a>
             `).join('');
@@ -43,7 +43,7 @@ function getNavHTML(activePage, basePath = '') {
 
         const cls = p.id === activePage
             ? 'text-emerald-900 font-bold border-b-2 border-emerald-600 pb-0.5 text-sm transition-colors'
-            : 'text-emerald-900/80 hover:text-emerald-900 transition-colors font-semibold text-sm';
+            : 'text-slate-600 hover:text-emerald-900 transition-colors font-medium text-sm';
         return `<a class="${cls} no-underline py-2" href="${basePath}${p.href}">${p.label}</a>`;
     }).join('\n');
 
@@ -53,13 +53,13 @@ function getNavHTML(activePage, basePath = '') {
             const dropLinks = p.children.map(c => {
                 const cCls = c.id === activePage
                     ? 'flex items-center gap-4 p-3 bg-emerald-50 text-emerald-900 rounded-xl font-bold text-xs'
-                    : 'flex items-center gap-4 p-3 text-emerald-900/60 hover:bg-slate-50 rounded-xl font-semibold text-xs transition-colors';
+                    : 'flex items-center gap-4 p-3 text-slate-500 hover:bg-slate-50 rounded-xl font-semibold text-xs transition-colors';
                 return `<a href="${basePath}${c.href}" class="${cCls} no-underline ml-8">${c.label}</a>`;
             }).join('');
 
             return `
                 <div class="space-y-1">
-                    <div class="flex items-center gap-4 p-4 text-emerald-900 font-bold text-sm">
+                    <div class="flex items-center gap-4 p-4 text-slate-600 font-semibold text-sm">
                         <span class="material-symbols-outlined">${p.icon}</span> ${p.label}
                     </div>
                     ${dropLinks}
@@ -68,22 +68,22 @@ function getNavHTML(activePage, basePath = '') {
         }
 
         const cls = p.id === activePage
-            ? 'flex items-center gap-4 p-4 bg-emerald-50 text-emerald-900 rounded-xl font-bold text-sm'
-            : 'flex items-center gap-4 p-4 text-emerald-900/70 hover:bg-slate-100 rounded-xl font-semibold text-sm transition-colors';
+            ? 'flex items-center gap-4 p-4 bg-emerald-50 text-emerald-900 rounded-xl font-semibold text-sm'
+            : 'flex items-center gap-4 p-4 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold text-sm transition-colors';
         return `<a href="${basePath}${p.href}" class="${cls} no-underline"><span class="material-symbols-outlined">${p.icon}</span> ${p.label}</a>`;
     }).join('\n');
 
     return `
-    <nav class="fixed top-0 w-full z-50 shadow-sm" style="background:rgba(255,255,255,0.8);backdrop-filter:blur(24px)">
+    <nav class="fixed top-0 w-full z-50 shadow-sm transition-all duration-300" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(20px)">
         <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
             <div class="flex items-center gap-8">
-                <a href="${basePath}index.html" class="text-xl font-extrabold tracking-tight text-emerald-950 no-underline">Pago Fácil</a>
-                <div class="hidden md:flex gap-8 items-center">${desktopLinks}</div>
+                <a href="${basePath}index.html" class="text-xl font-extrabold tracking-tight text-emerald-900 no-underline">Pago Fácil</a>
+                <div class="hidden md:flex gap-6 items-center">${desktopLinks}</div>
             </div>
             <div class="flex items-center gap-4">
-                <a href="https://app.gbtcfinance.es/login" class="text-emerald-950 font-bold text-sm hover:bg-emerald-50 px-4 py-2 rounded-lg transition-all active:scale-95 no-underline border border-emerald-900/10">Вход</a>
-                <a href="https://app.gbtcfinance.es/register?r=63932174" class="bg-emerald-900 text-white px-6 py-2 rounded-full font-bold text-sm shadow-md hover:bg-emerald-950 active:scale-95 transition-all hidden md:block no-underline">Начать</a>
-                <button class="md:hidden text-emerald-900" onclick="toggleMenu()"><span class="material-symbols-outlined text-2xl font-bold">menu</span></button>
+                <a href="https://app.gbtcfinance.es/login" class="text-emerald-900 font-medium text-sm hover:bg-emerald-50 px-4 py-2 rounded-lg transition-all active:scale-95 no-underline">Вход</a>
+                <a href="https://app.gbtcfinance.es/register?r=63932174" class="bg-[#005946] text-white px-5 py-2 rounded-full font-semibold text-sm shadow-sm hover:opacity-90 active:scale-95 transition-all hidden md:block no-underline">Начать</a>
+                <button class="md:hidden text-emerald-900" onclick="toggleMenu()"><span class="material-symbols-outlined text-2xl">menu</span></button>
             </div>
         </div>
     </nav>
@@ -93,10 +93,10 @@ function getNavHTML(activePage, basePath = '') {
             <div class="p-6 flex flex-col h-full overflow-y-auto">
                 <div class="flex justify-between items-center mb-10">
                     <span class="text-xl font-bold text-emerald-900">Меню</span>
-                    <button onclick="toggleMenu()" class="text-emerald-900"><span class="material-symbols-outlined">close</span></button>
+                    <button onclick="toggleMenu()" class="text-slate-500"><span class="material-symbols-outlined">close</span></button>
                 </div>
                 <nav class="flex flex-col gap-2 flex-grow">${mobileLinks}</nav>
-                <a href="https://app.gbtcfinance.es/register?r=63932174" class="w-full bg-emerald-900 text-white py-3 rounded-full font-bold text-sm mt-8 text-center no-underline block shrink-0">Начать</a>
+                <a href="https://app.gbtcfinance.es/register?r=63932174" class="w-full bg-[#005946] text-white py-3 rounded-full font-bold text-sm mt-8 text-center no-underline block shrink-0">Начать</a>
             </div>
         </div>
     </div>`;
