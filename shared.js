@@ -17,11 +17,13 @@ function getNavHTML(activePage, basePath = '') {
     ];
 
     const desktopLinks = pages.map(p => {
+        const commonCls = "text-sm transition-colors flex items-center gap-1 py-1 border-b-2 pb-0.5";
+        
         if (p.children) {
             const isActive = p.id === activePage || p.children.some(c => c.id === activePage);
             const mainCls = isActive
-                ? 'text-emerald-900 font-bold border-b-2 border-emerald-600 pb-0.5 text-sm transition-colors flex items-center gap-1'
-                : 'text-slate-600 hover:text-emerald-900 transition-colors font-medium text-sm flex items-center gap-1';
+                ? `${commonCls} text-emerald-900 font-bold border-emerald-600`
+                : `${commonCls} text-slate-600 hover:text-emerald-900 border-transparent font-medium`;
             
             const dropLinks = p.children.map(c => `
                 <a href="${basePath}${c.href}" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-emerald-900 hover:bg-emerald-50 rounded-lg transition-colors no-underline whitespace-nowrap">
@@ -30,7 +32,7 @@ function getNavHTML(activePage, basePath = '') {
             `).join('');
 
             return `
-                <div class="relative nav-item-dropdown group py-2">
+                <div class="relative nav-item-dropdown group">
                     <button class="${mainCls} outline-none">
                         ${p.label} <span class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform">expand_more</span>
                     </button>
@@ -42,9 +44,10 @@ function getNavHTML(activePage, basePath = '') {
         }
 
         const cls = p.id === activePage
-            ? 'text-emerald-900 font-bold border-b-2 border-emerald-600 pb-0.5 text-sm transition-colors'
-            : 'text-slate-600 hover:text-emerald-900 transition-colors font-medium text-sm';
-        return `<a class="${cls} no-underline py-2" href="${basePath}${p.href}">${p.label}</a>`;
+            ? `${commonCls} text-emerald-900 font-bold border-emerald-600`
+            : `${commonCls} text-slate-600 hover:text-emerald-900 border-transparent font-medium`;
+            
+        return `<a class="${cls} no-underline" href="${basePath}${p.href}">${p.label}</a>`;
     }).join('\n');
 
     const mobileLinks = pages.map(p => {
