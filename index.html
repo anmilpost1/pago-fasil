@@ -31,13 +31,55 @@ Pago Fácil — <br/><span class="text-primary-fixed">Платежи без гр
 <a href="#benefits" class="px-8 py-4 border-2 border-white/30 text-white rounded-full font-bold text-lg hover:bg-white/10 active:scale-95 transition-all no-underline">Узнать больше</a>
 </div>
 </div>
-<div class="relative hidden md:block">
-<div class="relative z-20 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 border-4 border-slate-900 shadow-[0_20px_50px_rgba(0,0,0,0.3)] max-w-[320px] mx-auto">
-<img alt="Pago Fácil App Interface" class="w-full h-auto" src="hero-app.png"/>
-</div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-400 opacity-20 blur-[100px] -z-10"></div>
-</div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-emerald-500 opacity-20 blur-[120px] -z-10"></div>
+<!-- Premium Wallet Card -->
+<div class="relative hidden md:block perspective-1000">
+    <div class="relative z-20 w-[480px] h-[340px] bg-[#121212] rounded-[32px] p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden transform rotate-y-[-10deg] rotate-x-[5deg] hover:rotate-0 transition-all duration-700 group">
+        <!-- Shine layer -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+        
+        <div class="flex flex-col h-full justify-between relative z-10">
+            <div>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-white/60 text-xs font-bold uppercase tracking-widest">Digital Wallet</span>
+                    <span class="material-symbols-outlined text-white/40 text-sm">more_horiz</span>
+                </div>
+                
+                <h3 class="text-white text-3xl font-bold mb-1 tracking-tight">€ 101.915,74</h3>
+                <p class="text-emerald-400 text-sm font-medium flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs">trending_up</span> +2.4% сегодня
+                </p>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-white/80 text-lg">arrow_upward</span>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-white/80 text-lg">arrow_downward</span>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-white/80 text-lg">swap_horiz</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circular Chart Overlay -->
+        <div class="absolute top-1/2 right-[-40px] -translate-y-1/2 scale-110 opacity-80 group-hover:scale-125 transition-transform duration-1000">
+            <svg width="200" height="200" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="20" />
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#10b981" stroke-width="20" 
+                    stroke-dasharray="502" stroke-dashoffset="150" stroke-linecap="round" class="drop-shadow-[0_0_8px_rgba(16,185,129,0.4)]" />
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#fbbf24" stroke-width="20" 
+                    stroke-dasharray="502" stroke-dashoffset="400" stroke-linecap="round" />
+            </svg>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <span class="block text-white/40 text-[10px] uppercase font-bold tracking-tighter">Status</span>
+                <span class="block text-white text-sm font-bold">Safe</span>
+            </div>
+        </div>
+    </div>
+    <!-- Glow behind the card -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500 opacity-20 blur-[120px] -z-10"></div>
 </div>
 </div>
 </header>
