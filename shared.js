@@ -132,9 +132,9 @@ function getFooterHTML(basePath = '') {
                 <div class="space-y-4">
                     <h4 class="text-xs tracking-wide uppercase font-semibold text-emerald-900">Юридическая информация</h4>
                     <ul class="space-y-2 list-none p-0 m-0">
-                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="#">Политика конфиденциальности</a></li>
-                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="#">Условия использования</a></li>
-                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="#">Настройки Cookie</a></li>
+                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}privacy-policy.html">Политика конфиденциальности</a></li>
+                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}terms.html">Условия использования</a></li>
+                        <li><a class="text-slate-500 hover:text-emerald-600 transition-colors text-xs font-semibold uppercase no-underline" href="${basePath}cookies-policy.html">Настройки Cookie</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">
