@@ -75,13 +75,12 @@
                         <input type="text" id="post-title" placeholder="Заголовок поста" class="w-full input-glass p-4">
                         <textarea id="post-content" rows="6" placeholder="Текст сообщения..." class="w-full input-glass p-4"></textarea>
 
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="text" id="media-url" placeholder="Ссылка на фото (URL)" class="w-full input-glass p-3 text-sm">
-                            <div onclick="document.getElementById('file-input').click()" class="border-2 border-dashed border-white/10 rounded-2xl flex items-center justify-center text-slate-500 hover:border-emerald-500 transition-all cursor-pointer relative overflow-hidden">
-                                <input type="file" id="file-input" class="hidden" accept="image/*" onchange="handleFileUpload(this)">
-                                <span id="upload-txt" class="text-xs uppercase font-bold text-center p-2">Выбрать файл</span>
-                                <img id="image-preview" class="hidden absolute inset-0 w-full h-full object-cover opacity-40">
-                            </div>
+                        <div class="space-y-3">
+                            <label class="block text-slate-400 text-sm ml-1">📎 Ссылка на фото (URL)</label>
+                            <input type="text" id="media-url" placeholder="https://..." class="w-full input-glass p-3 text-sm">
+                            <p class="text-slate-600 text-xs ml-1 leading-relaxed">
+                                💡 <strong>Как получить ссылку:</strong> загрузите фото в <a href="https://imgbb.com" target="_blank" class="text-emerald-400 underline">imgbb.com</a> и скопируйте «Direct link». Также подойдет ссылка из Telegraph, Google Drive (режим «Все, у кого есть ссылка»), или из Unsplash.
+                            </p>
                         </div>
 
                         <div class="grid grid-cols-3 gap-4">
