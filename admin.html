@@ -341,8 +341,14 @@
             const data = {
                 title,
                 text: content,
-                media: mediaUrls.length > 0 ? mediaUrls[0].url : '', // Первая ссылка строкой для совместимости
-                media_urls: mediaUrls.map(m => m.url),               // Массив для каруселей
+                media: mediaUrls.length > 0 ? mediaUrls[0].url : '', 
+                media_urls: mediaUrls.map(m => m.url),               
+                // Готовый массив для модуля "Send a Media Group" в Telegram
+                media_group: mediaUrls.map((m, idx) => ({
+                    type: 'photo',
+                    media: m.url,
+                    caption: idx === 0 ? content : '' // Текст прикрепляем только к первому фото
+                })),
                 platforms: activePlatforms,
                 is_carousel: mediaUrls.length > 1,
                 timestamp: new Date().toISOString()
