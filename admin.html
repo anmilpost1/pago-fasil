@@ -346,13 +346,14 @@
                 // Готовый массив для модуля "Send a Media Group" в Telegram
                 media_group: mediaUrls.map((m, idx) => ({
                     type: 'photo',
-                    media: m.url,
-                    caption: idx === 0 ? content : '' // Текст прикрепляем только к первому фото
+                    media: String(m.url).trim(),
+                    caption: idx === 0 ? String(content).trim() : ''
                 })),
                 platforms: activePlatforms,
                 is_carousel: mediaUrls.length > 1,
                 timestamp: new Date().toISOString()
             };
+            console.log("Sending to Webhook:", data);
 
             try {
                 const res = await fetch(webhook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
