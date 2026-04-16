@@ -58,8 +58,14 @@
 
                 <div class="glass p-8 rounded-[2.5rem]">
                     <h2 class="text-xl font-bold mb-4">Настройки</h2>
-                    <input type="text" id="webhook-url" placeholder="URL вебхука из Make.com" class="w-full input-glass p-3 text-xs mb-4">
-                    <button onclick="testConnection()" id="test-btn" class="text-xs text-emerald-400 font-bold hover:underline">Проверить соединение</button>
+
+                    <p class="text-slate-500 text-xs mb-2">🔗 Вебхук Make.com</p>
+                    <input type="text" id="webhook-url" placeholder="https://hook.make.com/..." class="w-full input-glass p-3 text-xs mb-2" oninput="localStorage.setItem('pago_webhook_url', this.value)">
+                    <button onclick="testConnection()" id="test-btn" class="text-xs text-emerald-400 font-bold hover:underline mb-6 block">Проверить соединение</button>
+
+                    <p class="text-slate-500 text-xs mb-2">🖼️ API-ключ ImgBB <a href="https://api.imgbb.com/" target="_blank" class="text-emerald-400 underline ml-1">Получить бесплатно →</a></p>
+                    <input type="text" id="imgbb-key" placeholder="Вставьте API-ключ сюда..." class="w-full input-glass p-3 text-xs mb-2" oninput="saveImgbbKey(this.value)">
+                    <p id="imgbb-status" class="text-xs text-slate-600 mt-1"></p>
                 </div>
             </div>
 
@@ -154,8 +160,27 @@
             if (localStorage.getItem('pago_admin_auth') === 'true') { showPanel(); }
             const savedWebhook = localStorage.getItem('pago_webhook_url');
             if (savedWebhook) { document.getElementById('webhook-url').value = savedWebhook; }
+            const savedKey = localStorage.getItem('pago_imgbb_key');
+            if (savedKey) {
+                document.getElementById('imgbb-key').value = savedKey;
+                document.getElementById('imgbb-status').textContent = '✅ Ключ сохранён';
+                document.getElementById('imgbb-status').className = 'text-xs text-emerald-400 mt-1';
+                IMGBB_API_KEY = savedKey;
+            }
             renderHistory();
         };
+
+        function saveImgbbKey(val) {
+            IMGBB_API_KEY = val.trim();
+            localStorage.setItem('pago_imgbb_key', IMGBB_API_KEY);
+            const status = document.getElementById('imgbb-status');
+            if (IMGBB_API_KEY) {
+                status.textContent = '✅ Ключ сохранён';
+                status.className = 'text-xs text-emerald-400 mt-1';
+            } else {
+                status.textContent = '';
+            }
+        }
 
         function showPanel() {
             document.getElementById('login-screen').classList.add('hidden');
