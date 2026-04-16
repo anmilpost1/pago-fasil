@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>{{TITLE}} | Pago Fácil Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed antialiased">
+
+    <!-- Navigation (Shared logic will be injected here) -->
+    <div id="nav-wrapper"></div>
+
+    <main class="pt-32 pb-20 px-4">
+        <article class="max-w-3xl mx-auto">
+            <!-- Header -->
+            <header class="mb-12">
+                <a href="../blog.html" class="text-emerald-600 font-semibold flex items-center gap-2 mb-6 hover:translate-x-[-4px] transition-transform text-sm uppercase tracking-wider">
+                    ← Назад в блог
+                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    {{TITLE}}
+                </h1>
+                <div class="flex items-center gap-4 text-slate-500 text-sm">
+                    <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-medium">Маркетинг</span>
+                    <span>{{DATE}}</span>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl mb-12">
+                <img src="{{IMAGE_URL}}" alt="{{TITLE}}" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Content -->
+            <div class="prose prose-lg prose-slate max-w-none prose-headings:text-slate-900 prose-emerald font-medium">
+                {{CONTENT}}
+            </div>
+
+            <!-- Footer CTA -->
+            <footer class="mt-20 p-10 bg-slate-900 rounded-[2.5rem] text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Понравилась статья?</h3>
+                <p class="text-slate-400 mb-8 max-w-md mx-auto">Подпишитесь на наш Telegram-канал, чтобы первыми узнавать о новостях крипторынка в Испании.</p>
+                <a href="https://t.me/pagofasil" class="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-4 px-8 rounded-2xl transition-all hover:scale-105">
+                    Подписаться на Telegram
+                </a>
+            </footer>
+        </article>
+    </main>
+
+    <script src="../shared.js"></script>
+</body>
+</html>

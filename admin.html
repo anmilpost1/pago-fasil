@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pago Fácil | Content Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0a0f18; color: #ffffff; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .input-glass { background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff !important; border-radius: 1rem; transition: all 0.3s; }
+        .input-glass::placeholder { color: rgba(255, 255, 255, 0.3); }
+        .input-glass:focus { border-color: #10b981; background: rgba(255, 255, 255, 0.08) !important; box-shadow: 0 0 15px rgba(16, 185, 129, 0.1); outline: none; }
+        .gradient-btn { background: linear-gradient(135deg, #10b981 0%, #059669 100%); transition: all 0.3s; border: none; color: white; cursor: pointer; }
+        .gradient-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3); }
+        .gradient-btn:active { transform: scale(0.98); }
+        .platform-card { cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
+        .platform-card.active { border-color: #10b981; background: rgba(16, 185, 129, 0.1); }
+        
+        input:-webkit-autofill {
+            -webkit-text-fill-color: white !important;
+            -webkit-box-shadow: 0 0 0px 1000px #0f172a inset !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+    
+    <!-- Login Layer -->
+    <div id="login-screen" class="w-full max-w-md glass p-10 rounded-[2.5rem] text-center">
+        <div class="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-8">
+            <span class="material-symbols-outlined text-4xl text-emerald-400">admin_panel_settings</span>
+        </div>
+        <h1 class="text-3xl font-extrabold mb-2">Pago Fácil</h1>
+        <p class="text-slate-400 mb-8">Мастер-панель управления контентом</p>
+        <input type="password" id="admin-pass" placeholder="Введите ключ доступа" class="w-full input-glass p-4 text-center mb-6">
+        <button onclick="checkAuth()" class="w-full gradient-btn py-4 rounded-2xl font-bold text-lg">Войти в систему</button>
+    </div>
+
+    <!-- Main Admin Panel -->
+    <div id="admin-panel" class="hidden w-full max-w-5xl">
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 flex flex-col gap-6">
+                <div class="glass p-8 rounded-[2.5rem]">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-emerald-400">monitoring</span> Статус системы
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-white/5 rounded-2xl">
+                            <span class="text-slate-400">TG/IG Bridge</span>
+                            <span class="text-emerald-400 flex items-center gap-1 text-xs"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> ONLINE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-[2.5rem]">
+                    <h2 class="text-xl font-bold mb-4">Настройки</h2>
+                    <input type="text" id="webhook-url" placeholder="URL вебхука из Make.com" class="w-full input-glass p-3 text-xs mb-4">
+                    <button onclick="testConnection()" id="test-btn" class="text-xs text-emerald-400 font-bold hover:underline">Проверить соединение</button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="lg:w-2/3 flex flex-col gap-8">
+                <div class="glass p-10 rounded-[2.5rem]">
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 class="text-2xl font-bold">Новая публикация</h2>
+                        <button onclick="resetForm()" class="text-slate-500 hover:text-white transition-colors">Очистить</button>
+                    </div>
+
+                    <div class="space-y-6">
+                        <input type="text" id="post-title" placeholder="Заголовок поста" class="w-full input-glass p-4">
+                        <textarea id="post-content" rows="6" placeholder="Текст сообщения..." class="w-full input-glass p-4"></textarea>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" id="media-url" placeholder="Ссылка на фото (URL)" class="w-full input-glass p-3 text-sm">
+                            <div onclick="document.getElementById('file-input').click()" class="border-2 border-dashed border-white/10 rounded-2xl flex items-center justify-center text-slate-500 hover:border-emerald-500 transition-all cursor-pointer relative overflow-hidden">
+                                <input type="file" id="file-input" class="hidden" accept="image/*" onchange="handleFileUpload(this)">
+                                <span id="upload-txt" class="text-xs uppercase font-bold text-center p-2">Выбрать файл</span>
+                                <img id="image-preview" class="hidden absolute inset-0 w-full h-full object-cover opacity-40">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4">
+                            <div onclick="togglePlatform('tg')" id="plat-tg" class="platform-card glass p-4 rounded-2xl text-center">
+                                <span class="block text-2xl mb-1">✈️</span>
+                                <span class="text-[10px] font-bold uppercase">Telegram</span>
+                            </div>
+                            <div onclick="togglePlatform('ig')" id="plat-ig" class="platform-card glass p-4 rounded-2xl text-center">
+                                <span class="block text-2xl mb-1">📸</span>
+                                <span class="text-[10px] font-bold uppercase">Instagram</span>
+                            </div>
+                            <div onclick="togglePlatform('web')" id="plat-web" class="platform-card glass p-4 rounded-2xl text-center">
+                                <span class="block text-2xl mb-1">🌐</span>
+                                <span class="text-[10px] font-bold uppercase">Website</span>
+                            </div>
+                        </div>
+
+                        <button id="publish-btn" onclick="publishContent()" class="w-full gradient-btn py-5 rounded-[1.5rem] font-bold text-xl">
+                            Опубликовать везде
+                        </button>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="glass p-10 rounded-[2.5rem]">
+                    <h2 class="text-xl font-bold mb-6">Журнал последних действий</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead>
+                                <tr class="text-slate-500 border-b border-white/5">
+                                    <th class="pb-4">Дата</th>
+                                    <th class="pb-4">Пост</th>
+                                    <th class="pb-4">Сети</th>
+                                    <th class="pb-4 text-right">Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const AUTH_KEY = "1234";
+        let activePlatforms = { tg: false, ig: false, web: false };
+        let history = JSON.parse(localStorage.getItem('pago_history') || '[]');
+
+        window.onload = () => {
+            if (localStorage.getItem('pago_admin_auth') === 'true') { showPanel(); }
+            const savedWebhook = localStorage.getItem('pago_webhook_url');
+            if (savedWebhook) { document.getElementById('webhook-url').value = savedWebhook; }
+            renderHistory();
+        };
+
+        function showPanel() {
+            document.getElementById('login-screen').classList.add('hidden');
+            document.getElementById('admin-panel').classList.remove('hidden');
+        }
+
+        function checkAuth() {
+            if (document.getElementById('admin-pass').value === AUTH_KEY) {
+                localStorage.setItem('pago_admin_auth', 'true');
+                showPanel();
+            } else { alert('Неверный ключ'); }
+        }
+
+        function togglePlatform(id) {
+            activePlatforms[id] = !activePlatforms[id];
+            document.getElementById(`plat-${id}`).classList.toggle('active');
+        }
+
+        function renderHistory() {
+            const body = document.getElementById('history-body');
+            body.innerHTML = history.slice().reverse().map(item => `
+                <tr class="border-b border-white/5">
+                    <td class="py-4 text-slate-500 text-xs">${new Date(item.date).toLocaleTimeString()}</td>
+                    <td class="py-4 font-medium">${item.title || 'Пост'}</td>
+                    <td class="py-4">
+                        ${item.platforms.tg ? '✈️' : ''} ${item.platforms.ig ? '📸' : ''} ${item.platforms.web ? '🌐' : ''}
+                    </td>
+                    <td class="py-4 text-right">
+                        <span class="px-2 py-1 rounded text-[10px] ${item.status === 'OK' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-red-500/10 text-red-400'}">
+                            ${item.status === 'OK' ? 'УСПЕШНО' : 'ОШИБКА'}
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function addToHistory(title, platforms, status) {
+            history.push({ title, platforms: {...platforms}, status, date: new Date().toISOString() });
+            if (history.length > 10) history.shift();
+            localStorage.setItem('pago_history', JSON.stringify(history));
+            renderHistory();
+        }
+
+        function handleFileUpload(input) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    document.getElementById('image-preview').src = e.target.result;
+                    document.getElementById('image-preview').classList.remove('hidden');
+                    document.getElementById('upload-txt').classList.add('opacity-0');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('post-title').value = '';
+            document.getElementById('post-content').value = '';
+            document.getElementById('media-url').value = '';
+            document.getElementById('image-preview').classList.add('hidden');
+            document.getElementById('upload-txt').classList.remove('opacity-0');
+        }
+
+        async function testConnection() {
+            const webhook = document.getElementById('webhook-url').value;
+            if (!webhook) return alert('Введите URL');
+            localStorage.setItem('pago_webhook_url', webhook);
+            try {
+                const res = await fetch(webhook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({type:'test'}) });
+                alert(res.ok ? 'Связь установлена!' : 'Ошибка ответа');
+            } catch(e) { alert('Ошибка сети'); }
+        }
+
+        async function publishContent() {
+            const webhook = document.getElementById('webhook-url').value;
+            const title = document.getElementById('post-title').value;
+            if (!webhook) return alert('Нет вебхука');
+            if (!activePlatforms.tg && !activePlatforms.ig && !activePlatforms.web) return alert('Выберите сеть');
+
+            const btn = document.getElementById('publish-btn');
+            btn.disabled = true;
+            btn.innerText = 'ОТПРАВКА...';
+
+            const data = {
+                title,
+                content: document.getElementById('post-content').value,
+                media: document.getElementById('media-url').value,
+                platforms: activePlatforms
+            };
+
+            try {
+                const res = await fetch(webhook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                if (res.ok) {
+                    addToHistory(title, activePlatforms, 'OK');
+                    alert('Успешно отправлено!');
+                    resetForm();
+                } else { throw new Error(); }
+            } catch(e) {
+                addToHistory(title, activePlatforms, 'ERROR');
+                alert('Ошибка отправки');
+            } finally {
+                btn.disabled = false;
+                btn.innerText = 'ОПУБЛИКОВАТЬ ВЕЗДЕ';
+            }
+        }
+    </script>
+</body>
+</html>
