@@ -372,6 +372,7 @@
                 // Готовый массив для модуля "Send a Media Group" в Telegram
                 media_group: mediaUrls.map((m, idx) => ({
                     type: 'photo',
+                    sendType: 'photo', // Специально для Make.com
                     media: String(m.url).trim(),
                     caption: idx === 0 ? String(content).trim() : ''
                 })),
