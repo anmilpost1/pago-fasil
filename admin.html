@@ -75,12 +75,32 @@
                         <input type="text" id="post-title" placeholder="Заголовок поста" class="w-full input-glass p-4">
                         <textarea id="post-content" rows="6" placeholder="Текст сообщения..." class="w-full input-glass p-4"></textarea>
 
+                        <!-- Image Upload Block -->
                         <div class="space-y-3">
-                            <label class="block text-slate-400 text-sm ml-1">📎 Ссылка на фото (URL)</label>
-                            <input type="text" id="media-url" placeholder="https://..." class="w-full input-glass p-3 text-sm">
-                            <p class="text-slate-600 text-xs ml-1 leading-relaxed">
-                                💡 <strong>Как получить ссылку:</strong> загрузите фото в <a href="https://imgbb.com" target="_blank" class="text-emerald-400 underline">imgbb.com</a> и скопируйте «Direct link». Также подойдет ссылка из Telegraph, Google Drive (режим «Все, у кого есть ссылка»), или из Unsplash.
-                            </p>
+                            <label class="block text-slate-400 text-sm ml-1">🖼️ Фото для поста</label>
+                            <div id="upload-zone" onclick="document.getElementById('file-input').click()"
+                                class="border-2 border-dashed border-white/15 rounded-2xl flex flex-col items-center justify-center p-6 cursor-pointer hover:border-emerald-500 hover:bg-emerald-500/5 transition-all relative overflow-hidden min-h-[120px]">
+                                <input type="file" id="file-input" class="hidden" accept="image/*" onchange="uploadImage(this)">
+                                <div id="upload-idle" class="text-center text-slate-500">
+                                    <span class="material-symbols-outlined text-4xl mb-2 block">add_photo_alternate</span>
+                                    <span class="text-sm font-semibold">Нажмите, чтобы выбрать фото</span>
+                                    <span class="block text-xs mt-1 opacity-60">JPG, PNG, GIF до 32MB</span>
+                                </div>
+                                <div id="upload-loading" class="hidden text-center text-emerald-400">
+                                    <span class="material-symbols-outlined text-4xl mb-2 block animate-spin">sync</span>
+                                    <span class="text-sm font-semibold">Загружаем фото...</span>
+                                </div>
+                                <img id="image-preview" class="hidden absolute inset-0 w-full h-full object-cover">
+                                <div id="upload-overlay" class="hidden absolute inset-0 bg-black/50 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-3xl">edit</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <input type="text" id="media-url" placeholder="Ссылка на фото появится здесь автоматически..." class="w-full input-glass p-3 text-xs" style="background: rgba(255,255,255,0.03) !important;">
+                                <button onclick="clearImage()" class="text-slate-500 hover:text-red-400 transition-colors flex-shrink-0" title="Очистить">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="grid grid-cols-3 gap-4">
@@ -179,25 +199,75 @@
             renderHistory();
         }
 
-        function handleFileUpload(input) {
+        // Ключ API ImgBB — запоминается в браузере после первого ввода
+        // Получите бесплатно на: https://api.imgbb.com/
+        let IMGBB_API_KEY = localStorage.getItem('pago_imgbb_key') || '';
+
+        async function uploadImage(input) {
             const file = input.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    document.getElementById('image-preview').src = e.target.result;
-                    document.getElementById('image-preview').classList.remove('hidden');
-                    document.getElementById('upload-txt').classList.add('opacity-0');
-                };
-                reader.readAsDataURL(file);
+            if (!file) return;
+
+            if (!IMGBB_API_KEY) {
+                IMGBB_API_KEY = prompt('🔑 Введите API-ключ ImgBB (бесплатный, получить на api.imgbb.com):');
+                if (!IMGBB_API_KEY) return;
+                localStorage.setItem('pago_imgbb_key', IMGBB_API_KEY);
             }
+
+            document.getElementById('upload-idle').classList.add('hidden');
+            document.getElementById('upload-loading').classList.remove('hidden');
+
+            try {
+                const base64 = await fileToBase64(file);
+                const formData = new FormData();
+                formData.append('key', IMGBB_API_KEY);
+                formData.append('image', base64.split(',')[1]);
+
+                const res = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: formData });
+                const json = await res.json();
+
+                if (json.success) {
+                    const url = json.data.url;
+                    document.getElementById('image-preview').src = url;
+                    document.getElementById('image-preview').classList.remove('hidden');
+                    document.getElementById('upload-overlay').classList.remove('hidden');
+                    const urlField = document.getElementById('media-url');
+                    urlField.value = url;
+                    urlField.removeAttribute('readonly');
+                    urlField.style.color = '#10b981';
+                } else {
+                    throw new Error(json.error?.message || 'Ошибка загрузки');
+                }
+            } catch(e) {
+                alert('Ошибка: ' + e.message + '\n\nПроверьте API-ключ на api.imgbb.com');
+                document.getElementById('upload-idle').classList.remove('hidden');
+            } finally {
+                document.getElementById('upload-loading').classList.add('hidden');
+            }
+        }
+
+        function fileToBase64(file) {
+            return new Promise((res, rej) => {
+                const r = new FileReader();
+                r.onload = e => res(e.target.result);
+                r.onerror = rej;
+                r.readAsDataURL(file);
+            });
+        }
+
+        function clearImage() {
+            document.getElementById('media-url').value = '';
+            document.getElementById('media-url').style.color = '';
+            document.getElementById('media-url').setAttribute('readonly', '');
+            document.getElementById('image-preview').classList.add('hidden');
+            document.getElementById('upload-overlay').classList.add('hidden');
+            document.getElementById('upload-idle').classList.remove('hidden');
+            document.getElementById('file-input').value = '';
         }
 
         function resetForm() {
             document.getElementById('post-title').value = '';
             document.getElementById('post-content').value = '';
-            document.getElementById('media-url').value = '';
-            document.getElementById('image-preview').classList.add('hidden');
-            document.getElementById('upload-txt').classList.remove('opacity-0');
+            clearImage();
         }
 
         async function testConnection() {
