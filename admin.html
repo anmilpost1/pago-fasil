@@ -341,7 +341,8 @@
             const data = {
                 title,
                 text: content,
-                media_urls: mediaUrls.map(m => m.url), // Отправляем массив ссылок!
+                media: mediaUrls.length > 0 ? mediaUrls[0].url : '', // Первая ссылка строкой для совместимости
+                media_urls: mediaUrls.map(m => m.url),               // Массив для каруселей
                 platforms: activePlatforms,
                 is_carousel: mediaUrls.length > 1,
                 timestamp: new Date().toISOString()
