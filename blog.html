@@ -10,15 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .glass-nav { background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
         .nav-dropdown { display: none; }
         .nav-item-dropdown:hover .nav-dropdown { display: block; }
     </style>
 </head>
 <body class="text-slate-900">
 
-    <!-- Navigation -->
-    <div id="nav-wrapper"></div>
+    <!-- Navigation — инициализируется через shared.js -->
+    <div id="site-nav"></div>
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 bg-white border-b border-slate-100">
@@ -32,7 +31,6 @@
     <!-- Blog Grid -->
     <main class="max-w-7xl mx-auto px-6 py-20">
         <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Посты появятся здесь автоматически -->
             <div class="col-span-full text-center py-20 text-slate-400">
                 <span class="material-symbols-outlined text-5xl mb-4 block">newspaper</span>
                 <p class="font-medium">Загрузка публикаций...</p>
@@ -51,28 +49,31 @@
         </div>
     </section>
 
-    <!-- ВАЖНО: Путь к shared.js должен быть корректным -->
+    <!-- Footer — инициализируется через shared.js -->
+    <div id="site-footer"></div>
+
     <script src="shared.js"></script>
     <script src="posts_db.js"></script>
     <script>
+        // Инициализация меню и футера
+        initPage('blog');
+
+        // Рендер постов
         function renderPosts() {
             const container = document.getElementById('posts-container');
             if (!container) return;
 
             const posts = window.BLOG_POSTS;
             if (!posts || posts.length === 0) {
-                container.innerHTML = '<p class="col-span-full text-center py-20 text-slate-400 font-medium">Публикаций пока нет. Создайте первый пост через Pago Hub!</p>';
+                container.innerHTML = '<p class="col-span-full text-center py-20 text-slate-400 font-medium">Публикаций пока нет. Создайте первый пост через Content Hub!</p>';
                 return;
             }
 
-            // Сортируем новые посты наверх
-            const sorted = [...posts].reverse();
-
-            container.innerHTML = sorted.map(post => `
+            container.innerHTML = [...posts].reverse().map(post => `
                 <article class="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="h-64 overflow-hidden relative bg-slate-100">
                         ${post.image
-                            ? `<img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.style.display='none'">`
+                            ? `<img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-100\\'><span class=\\'material-symbols-outlined text-6xl text-emerald-300\\'>article</span></div>'">`
                             : `<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-100"><span class="material-symbols-outlined text-6xl text-emerald-300">article</span></div>`
                         }
                         <div class="absolute top-6 left-6">
@@ -96,8 +97,7 @@
             `).join('');
         }
 
-        // Пробуем загрузить посты, добавленные через Make.com
-        window.addEventListener('load', renderPosts);
+        renderPosts();
     </script>
 </body>
 </html>
